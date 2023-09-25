@@ -1,0 +1,11 @@
+.top-rated-products {
+  @include e(title) {
+    padding-top: 20px;
+    font-size: 35px;
+  }
+
+  @include e(desc) {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+}

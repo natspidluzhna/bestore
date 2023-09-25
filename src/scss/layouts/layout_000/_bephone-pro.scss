@@ -1,0 +1,79 @@
+.bephone-pro {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.be-phone-text-box {
+  display: flex;
+  flex-direction: column;
+
+  @include e(text) {
+    margin: 0 0 15px;
+    text-align: center;
+    order: -1;
+    font-size: 13px;
+    line-height: 19px;
+    font-weight: 500;
+    letter-spacing: 0px;
+  }
+
+  @include e(title) {
+    margin: 0 0 15px;
+    text-align: center;
+  }
+
+  @include e(span) {
+    color: $lightBlue;
+  }
+}
+
+.be-phone-box {
+  background-color: $bgColor;
+  border-radius: $borderRadius;
+  padding: 25px;
+  margin-bottom: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.be-phone-content-box {
+  color: $textColor;
+  @include e(title) {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+
+    font-weight: 500;
+    letter-spacing: 0px;
+    margin-bottom: 15px;
+  }
+  @include e(text) {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 13px;
+
+    font-weight: 400;
+    letter-spacing: 0px;
+  }
+
+  @include e(link) {
+    text-decoration: none;
+    color: $textColor;
+  }
+}
+
+.be-phone-img-box {
+  order: -1;
+  width: 100%;
+  margin: 5px 5px 25px;
+
+  @include e(img) {
+    border-radius: $borderRadius;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}

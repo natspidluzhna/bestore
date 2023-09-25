@@ -1,0 +1,10 @@
+.about-us-article {
+  @include e(title) {
+    @include m(about-beshop) {
+      font-size: 15px;
+    }
+    @include m(our-journey) {
+      font-size: 15px;
+    }
+  }
+}

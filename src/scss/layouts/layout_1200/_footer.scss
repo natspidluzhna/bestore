@@ -1,0 +1,29 @@
+.footer {
+  padding: 40px 0 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer-col_one {
+  flex-direction: column;
+}
+
+.footer-social-link-box {
+  flex-basis: initial;
+}
+
+.footer-payment-box {
+  flex-basis: 100%;
+}
+
+.customer-service,
+.useful-links,
+.delivery {
+  padding: 0 40px 20px;
+  align-items: flex-start;
+}
+
+.footer-link {
+  margin-bottom: 15px;
+}

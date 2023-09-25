@@ -1,0 +1,15 @@
+.be-phone-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.be-phone-img-box {
+  flex: 0 0 40%;
+  @include e(img) {
+    width: 100%;
+  }
+}
+
+.be-phone-content-box {
+  padding: 10px;
+}

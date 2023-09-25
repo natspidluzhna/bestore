@@ -1,0 +1,103 @@
+.articles {
+  @include e(title) {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+.article-title {
+  margin: 0 0 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.article-post-box {
+  padding: 10px 0;
+  @include e(title) {
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  @include e(title-link) {
+    text-decoration: none;
+    color: $black;
+  }
+
+  @include e(text) {
+    margin: 0;
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: $textAddColor;
+  }
+
+  @include e(read-more) {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+    color: rgb(28, 97, 231);
+  }
+}
+
+.meta {
+  color: $textAddColor;
+  font-size: 13px;
+  margin-bottom: 15px;
+
+  @include e(tag) {
+    text-decoration: none;
+    color: $textAddColor;
+  }
+}
+
+.article-post-img {
+  order: -1;
+  position: relative;
+
+  @include e(img) {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+}
+
+.meta-img {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+
+  display: flex;
+
+  @include e(icon) {
+    width: 22px;
+    border-radius: 50%;
+    margin-right: 7px;
+  }
+  @include e(author) {
+    text-decoration: none;
+    color: $white;
+    font-size: 14;
+  }
+}
+
+.articles {
+  padding: 0 10px;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-arrow-left {
+  font-size: 20px;
+  position: absolute;
+  left: 3px;
+  top: 49%;
+}
+.icon-arrow-right {
+  font-size: 20px;
+  position: absolute;
+  right: 3px;
+  top: 49%;
+}

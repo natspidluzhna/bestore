@@ -1,0 +1,29 @@
+/*$slickFonts: (
+  "slick.eot": "embedded-opentype",
+  "slick.woff": "woff",
+  "slick.ttf": "truetype",
+  "#slick": "svg",
+);
+
+@font-face {
+  font-family: "slick";
+  font-weight: normal;
+  font-style: normal;
+  src: url("#{$fontsPath}slick.eot");
+  src: url(".#{$fontsPath}slick.eot?#iefix") format("embedded-opentype"),
+    url("#{$fontsPath}slick.woff") format("woff"),
+    url("#{$fontsPath}slick.ttf") format("truetype"),
+    url("#{$fontsPath}#slick") format("svg");
+}*/
+
+@font-face {
+  font-family: "icomoon";
+  src: url("#{$fontsPath}/icomoon.eot?uy73nw");
+  src: url("#{$fontsPath}/icomoon.eot?uy73nw#iefix") format("embedded-opentype"),
+    url("#{$fontsPath}/icomoon.ttf?uy73nw") format("truetype"),
+    url("#{$fontsPath}/icomoon.woff?uy73nw") format("woff"),
+    url("#{$fontsPath}/icomoon.svg?uy73nw#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

@@ -1,0 +1,46 @@
+.footer {
+  padding: 60px 60px 90px 60px;
+}
+
+.footer-col_one {
+  display: flex;
+  flex-direction: column;
+}
+
+.customer-info {
+  padding-left: 40px;
+  @include e(title) {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+
+  @include e(phone) {
+    font-size: 2em;
+    line-height: 1em;
+    font-weight: 500;
+    color: $mainColor;
+  }
+}
+
+.footer-col_two {
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.customer-service,
+.useful-links,
+.delivery {
+  padding: 20px;
+}
+
+.customer-service > a:hover {
+  color: $lightBlue;
+}
+
+.useful-links > a:hover {
+  color: $lightBlue;
+}
+
+.delivery > a:hover {
+  color: $lightBlue;
+}

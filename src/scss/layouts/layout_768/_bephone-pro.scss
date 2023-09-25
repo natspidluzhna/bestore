@@ -1,0 +1,47 @@
+.wrapper-be-phone {
+  justify-content: center;
+}
+
+.be-phone-img-box {
+  order: initial;
+}
+
+.be-phone-text-box {
+  flex-basis: 100%;
+
+  @include e(text) {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+    letter-spacing: 0px;
+  }
+
+  @include e(title) {
+    font-size: 42px;
+    line-height: 50px;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+}
+
+.be-phone-box {
+  flex: 0 0 calc((100% - 20px) / 2);
+}
+
+.be-phone-content-box {
+  @include e(title) {
+    text-align: initial;
+    font-weight: 500;
+    letter-spacing: 0px;
+    margin-bottom: 20px;
+  }
+
+  @include e(text) {
+    text-align: initial;
+    font-size: 14px;
+  }
+  @include e(link) {
+    text-align: initial;
+    font-size: 14px;
+  }
+}

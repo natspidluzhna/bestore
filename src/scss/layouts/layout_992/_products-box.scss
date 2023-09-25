@@ -1,0 +1,24 @@
+.product-box-icon {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cart-icon {
+  display: block;
+}
+
+.cart-box:hover .cart-box__add {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.cart-box .cart-icon {
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(100%);
+}
+
+.cart-box:hover .cart-icon {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,108 @@
+.special-offer {
+  padding: 20px 15px 0;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  background-color: #522876;
+  border-radius: 16px;
+}
+
+.special-offer-box {
+  display: flex;
+  flex-direction: column;
+
+  @include e(title) {
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+  }
+
+  @include e(span) {
+    text-align: center;
+    color: #c2c5f9;
+    margin: 0 0 20px;
+  }
+
+  @include e(name) {
+    text-align: center;
+    color: #ffffff;
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+
+  @include e(price) {
+    text-align: center;
+    color: #ffffff;
+    font-size: 19px;
+    margin-bottom: 15px;
+  }
+
+  @include e(btn-wrapper) {
+    text-decoration: none;
+    background-color: #01ceeb;
+    color: #ffffff;
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    padding: 16px 40px 16px 40px;
+    border-width: 0px;
+    border-radius: 8px;
+    text-align: center;
+    align-self: center;
+  }
+}
+
+.col {
+  flex-basis: 50%;
+}
+
+.col_two {
+  display: flex;
+  flex-direction: column;
+  order: -1;
+}
+
+.counter {
+  padding: 0 40px;
+}
+
+.counter__item {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.number-wrapper {
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+
+  @include e(count) {
+    color: #fff;
+  }
+
+  @include e(title) {
+    margin: 0;
+    color: $white;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+}
+
+.img-wrapper {
+  background-image: url(#{$img}bethemestore-special-offer-pic.webp);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 260px;
+  width: 100%;
+}

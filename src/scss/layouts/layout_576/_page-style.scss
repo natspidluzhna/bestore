@@ -1,0 +1,21 @@
+.specification-table {
+  @include e(img) {
+    width: 100%;
+  }
+}
+
+.specification {
+  @include e(title) {
+    font-size: 18px;
+  }
+}
+
+.related-products > h3 {
+  font-size: 21px;
+}
+
+.products-box {
+  @include m(related-product) {
+    justify-content: center;
+  }
+}

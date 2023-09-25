@@ -1,0 +1,70 @@
+.mobile-nav {
+  position: absolute;
+  background-color: $white;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  text-align: center;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+
+  @include e(list) {
+    list-style: none outside;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  @include e(list) {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  @include e(item) {
+    padding: 20px 15px;
+    text-decoration: none;
+    line-height: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include e(svg) {
+    height: 30px;
+    line-height: 1;
+    width: auto;
+    display: inline-block;
+    position: relative;
+  }
+
+  @include e(count) {
+    @include m(cart) {
+      position: absolute;
+      top: 12px;
+      margin-left: -5px;
+      background-color: rgb(46, 107, 198);
+      width: 18px;
+      line-height: 18px;
+      text-align: center;
+      font-size: 11px;
+      color: $white;
+      border-radius: 100%;
+    }
+
+    @include m(wishlist) {
+      position: absolute;
+      top: 12px;
+      margin-left: -5px;
+      background-color: rgb(46, 107, 198);
+      width: 18px;
+      line-height: 18px;
+      text-align: center;
+      font-size: 11px;
+      color: $white;
+      border-radius: 100%;
+    }
+  }
+}

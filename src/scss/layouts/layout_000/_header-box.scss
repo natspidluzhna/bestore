@@ -1,0 +1,75 @@
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.logo-box {
+  margin-right: auto;
+
+  @include e(title) {
+    margin: 0;
+  }
+  @include e(icon) {
+    width: 90px;
+    height: 27px;
+  }
+}
+
+.menu-box {
+  order: -1;
+  margin-right: 10px;
+
+  @include e(icon) {
+    color: $lightBlue;
+    width: 30px;
+    height: 25px;
+  }
+}
+
+.search-form-box {
+  @include e(icon) {
+    width: 30px;
+    height: 25px;
+    margin-right: 10px;
+  }
+}
+
+.user-box {
+  display: flex;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+
+  @include e(icon) {
+    width: 30px;
+    height: 25px;
+  }
+
+  @include e(count) {
+    position: absolute;
+    top: -9px;
+    right: -11px;
+    background-color: rgb(46, 107, 198);
+    width: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-size: 11px;
+    color: $white;
+    border-radius: 100%;
+  }
+
+  @include e(desc) {
+    display: none;
+  }
+
+  @include m(wishlist) {
+    display: none;
+  }
+}
+
+.header-form {
+  display: none;
+}

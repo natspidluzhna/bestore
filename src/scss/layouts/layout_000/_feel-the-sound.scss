@@ -1,0 +1,29 @@
+.wrapper-box {
+  min-height: 520px;
+  background: url(#{$img}bethemestore-section-be-sound.webp);
+  background-color: $bgColor3;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  padding: 30px 10px 60px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.wrapper-main {
+  align-self: center;
+  padding: 35px 0px 20px;
+  @include e(title) {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  @include e(text) {
+    font-size: 13px;
+  }
+}
+
+.products-box__list_feel-the-sound {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}

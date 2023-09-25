@@ -1,0 +1,41 @@
+//fonts
+$google-font: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";
+$prefix: prefix- !default;
+$baseFontSize: 16px;
+$baseFontFamily: "Plus Jakarta Sans", sans-serif;
+$mediumFontWeight: 500;
+
+$mobilePadding: (12px / $baseFontSize) * 1rem;
+$desktopPadding: 1rem;
+
+// Paths
+
+$i: "../i/";
+$img: "../img/";
+$fontsPath: "../fonts/";
+$usersFilesPath: "../userfiles/";
+
+//Border
+$borderRadius: 16px;
+
+// Colors
+$mainColor: #0b1a48;
+$addColor: #797979;
+$white: #ffffff;
+$red: #e22d2d;
+$orange: #ffb300;
+$green: #438e44;
+$black: #000000;
+$blue: rgb(46, 107, 198);
+$darkBlue: #2f38bf;
+$lightBlue: #2a27e9;
+$textColor: #4c4d52;
+$textAddColor: #a5a5a5;
+$bgColor: #f7f7f7;
+$bgColor2: #e7e7e7;
+$bgColor3: #f2f2f0;
+$bgColor4: #f8f8f8;
+$bgColorBlack: #282828;
+$borderBtmColor: #e6e6e6;
+
+$colors: () !default;

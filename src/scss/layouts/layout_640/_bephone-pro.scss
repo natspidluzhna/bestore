@@ -1,0 +1,20 @@
+.wrapper-be-phone {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.be-phone-content-box {
+  @include e(title) {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  @include e(text) {
+    font-size: 16px;
+  }
+
+  @include e(link) {
+    font-size: 16px;
+  }
+}

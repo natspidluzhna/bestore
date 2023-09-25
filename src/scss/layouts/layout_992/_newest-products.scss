@@ -1,0 +1,11 @@
+.newest-products {
+  padding: 60px 0 60px;
+
+  @include e(title) {
+    font-size: 35px;
+  }
+  @include e(desc) {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+}

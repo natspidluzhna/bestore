@@ -1,0 +1,129 @@
+.logo-box {
+  @include e(icon) {
+    width: 120px;
+    height: 36px;
+  }
+}
+
+.menu-box {
+  @include e(icon) {
+    width: 34px;
+    height: 30px;
+  }
+}
+
+.search-form-box {
+  flex-grow: 1;
+  margin-left: 20px;
+
+  @include e(icon) {
+    display: none;
+  }
+}
+
+.header-form {
+  display: block;
+  width: 100%;
+
+  @include e(icon) {
+    position: absolute;
+    top: 30%;
+    left: 13px;
+    font-size: 18px;
+    color: $darkBlue;
+  }
+
+  @include e(control-group) {
+    position: relative;
+  }
+
+  @include e(control) {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    color: $bgColor2;
+    border: 1px solid $bgColor2;
+    border-radius: 6px;
+    padding: 7px 7px 7px 40px;
+    font-family: Plus Jakarta Sans, sans-serif;
+    font-size: 15px;
+    transition: border-color 0.3s, background-color 0.3s;
+  }
+}
+
+.header-form__control:focus {
+  border: 1px solid $lightBlue;
+  color: $mainColor;
+}
+
+.icon-search_form {
+  position: absolute;
+  top: 30%;
+  left: 12px;
+  color: $darkBlue;
+}
+
+.user-box {
+  @include e(link) {
+    text-decoration: none;
+  }
+
+  @include m(wishlist) {
+    display: none;
+  }
+
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+
+  @include e(icon) {
+    width: 30px;
+    height: 25px;
+    margin-right: 10px;
+
+    @include m(store) {
+      margin-right: 18px;
+    }
+  }
+
+  @include e(desc) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include e(title) {
+    font-weight: 500;
+    color: $mainColor;
+  }
+
+  @include e(text) {
+    color: $addColor;
+  }
+
+  @include e(count) {
+    position: absolute;
+    position: absolute;
+    top: -6%;
+    right: 45%;
+    background-color: rgb(46, 107, 198);
+    width: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-size: 11px;
+    color: $white;
+    border-radius: 100%;
+  }
+
+  @include m(store) {
+    position: relative;
+  }
+}
+
+.icon-support {
+  @include m(header) {
+    font-size: 32px;
+    margin-right: 7px;
+    color: $lightBlue;
+  }
+}

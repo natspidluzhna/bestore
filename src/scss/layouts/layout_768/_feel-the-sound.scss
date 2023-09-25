@@ -1,0 +1,22 @@
+.wrapper-box {
+  background-size: auto;
+  background-position: center;
+}
+
+.products-box__list_feel-the-sound {
+  grid-template-columns: repeat(2, minmax(250px, 300px));
+}
+
+.wrapper {
+  padding: 80px 0;
+  grid-template-columns: 1fr 1fr;
+}
+
+.wrapper-main {
+  @include e(title) {
+    font-size: 36px;
+  }
+  @include e(text) {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,9 @@
+.top-rated-products-box {
+  @include e(list) {
+    gap: 3%;
+  }
+
+  @include e(title) {
+    font-size: 20px;
+  }
+}

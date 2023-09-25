@@ -1,0 +1,3512 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BeStore</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <div class="container-fixed">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="promo-bar-box">
+            <span class="promo-bar-box__text">
+              Like us on <a href="#">Facebook</a> and receive a
+              <span class="bold-span">20% discount</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <header>
+        <div class="container">
+          <div class="header-box">
+            <div class="logo-box">
+              <h1 class="logo-box__title">
+                <span class="sr-only">Welcome</span>
+              </h1>
+              <svg class="logo-box__icon" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="i/sprite.svg#logo" />
+              </svg>
+            </div>
+            <div class="menu-box">
+              <svg
+                class="menu-box__icon menu-button"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use xlink:href="i/sprite.svg#menu" />
+              </svg>
+            </div>
+            <div class="search-form-box">
+              <svg
+                class="search-form-box__icon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use xlink:href="i/sprite.svg#search" />
+              </svg>
+              <form class="header-form" method="get" id="searchForm">
+                <div class="header-form__control-group">
+                  <i class="icon-search header-form__icon"></i>
+                  <input
+                    class="header-form__control blue-border"
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Enter your search"
+                    id="searchInput"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="user-box">
+              <div class="user-box user-box_wishlist">
+                <a class="user-box__link" href="#">
+                  <i class="icon-support icon-support_header"></i>
+                </a>
+                <div class="user-box__desc user-box__desc_wishlist">
+                  <span class="user-box__title">Support 24/7</span>
+                  <span class="user-box__text">+61 (0) 3 8376 6284</span>
+                </div>
+              </div>
+              <div class="user-box user-box_login login-button">
+                <a class="user-box__link" href="#">
+                  <svg
+                    class="user-box__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use xlink:href="i/sprite.svg#login" />
+                  </svg>
+                </a>
+                <div class="user-box__desc user-box__desc_login">
+                  <span class="user-box__title">Login</span>
+                  <span class="user-box__text">or register</span>
+                </div>
+              </div>
+              <div class="login">
+                <div class="login-heading">
+                  <h4 class="login-heading__title">Login</h4>
+                  <div class="login-close">
+                    <i class="icon-close icon-close_login"></i>
+                  </div>
+                </div>
+                <form class="login-form" method="post">
+                  <p class="login-username">
+                    <label for="username">
+                      Username or email address
+                      <span class="required">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      class="input-username"
+                      name="username"
+                      id="username"
+                    />
+                  </p>
+                  <p class="login-password">
+                    <label for="password"
+                      >Password&nbsp;
+                      <span class="required">*</span>
+                    </label>
+
+                    <input
+                      class="login-password-input"
+                      type="password"
+                      name="password"
+                      id="password"
+                      autocomplete="current-password"
+                    />
+                  </p>
+                  <p class="login-form-btn">
+                    <button
+                      type="submit"
+                      class="login-btn"
+                      name="login"
+                      value="Log in"
+                    >
+                      Login
+                    </button>
+                  </p>
+                  <p class="login-form-footer">
+                    <a href="#" class="form-lost_password"
+                      >Lost your password?</a
+                    >
+                    <label class="label-for-checkbox">
+                      <input
+                        class="login-input-checkbox"
+                        name="label-for-checkbox"
+                        type="checkbox"
+                        title="Remember me"
+                        aria-label="Remember me"
+                      />
+                      <span>Remember me</span>
+                    </label>
+                  </p>
+                </form>
+                <div class="create-account-question">
+                  <p>No account yet?</p>
+                  <a href="#" class="create-account-btn">Create an Account</a>
+                </div>
+              </div>
+              <div class="user-box user-box_store store-btn">
+                <a class="user-box__link" href="#">
+                  <svg
+                    class="user-box__icon user-box__icon_store"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use xlink:href="i/sprite.svg#store"></use>
+                  </svg>
+                </a>
+                <span class="user-box__count">0</span>
+                <div class="user-box__desc user-box__desc_store">
+                  <span class="user-box__title">Your</span>
+                  <span class="user-box__text">cart</span>
+                </div>
+              </div>
+              <div class="cart-side-panel">
+                <div class="cart-side-panel-heading">
+                  <i class="icon-close icon-close icon-close_store"></i>
+                  <h3>
+                    <svg
+                      class="cart-side-panel-heading__icon"
+                      width="26"
+                      viewBox="0 0 26 26"
+                      aria-label="cart icon"
+                    >
+                      <defs>
+                        <style>
+                          .path {
+                            fill: none;
+                            stroke: #333;
+                            stroke-miterlimit: 10;
+                            stroke-width: 1.5px;
+                          }
+                        </style>
+                      </defs>
+                      <polygon
+                        class="path"
+                        points="20.4 20.4 5.6 20.4 6.83 10.53 19.17 10.53 20.4 20.4"
+                      ></polygon>
+                      <path
+                        class="path"
+                        d="M9.3,10.53V9.3a3.7,3.7,0,1,1,7.4,0v1.23"
+                      ></path></svg
+                    >Cart
+                  </h3>
+                </div>
+                <div class="cart-side-panel-content">
+                  <div class="cart-empty">
+                    <svg
+                      class="cart-side-panel-content__icon"
+                      width="26"
+                      viewBox="0 0 26 26"
+                      aria-hidden="true"
+                    >
+                      <defs>
+                        <style>
+                          .path {
+                            fill: none;
+                            stroke: #333;
+                            stroke-miterlimit: 10;
+                            stroke-width: 1.5px;
+                          }
+                        </style>
+                      </defs>
+                      <polygon
+                        class="path"
+                        points="20.4 20.4 5.6 20.4 6.83 10.53 19.17 10.53 20.4 20.4"
+                      ></polygon>
+                      <path
+                        class="path"
+                        d="M9.3,10.53V9.3a3.7,3.7,0,1,1,7.4,0v1.23"
+                      ></path>
+                    </svg>
+                    <p>Your cart is currently empty.</p>
+                  </div>
+                </div>
+                <div class="cart-side-panel-footer">
+                  <div class="cart-side-panel-footer__subtotal">
+                    Subtotal: <span>$ 0.00</span>
+                  </div>
+                  <div class="cart-side-panel-footer__total">
+                    Total: <span>$ 0.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./header-box -->
+        </div>
+        <div class="container">
+          <!--   DESKTOP menu START   -->
+          <nav class="main-nav">
+            <ul class="nav-desktop">
+              <li class="nav-desktop__item nav-desktop__item_computer">
+                <a class="nav-desktop__link" href="#">
+                  <svg
+                    class="nav-desktop__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use xlink:href="i/sprite.svg#header-icon-computers" />
+                  </svg>
+                  Computers
+                  <i class="icon-down icon-down_nav"></i>
+                </a>
+              </li>
+              <li class="nav-desktop__item nav-desktop__item_smartphone">
+                <a class="nav-desktop__link" href="#">
+                  <svg
+                    class="nav-desktop__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use xlink:href="i/sprite.svg#header-icon-phones" />
+                  </svg>
+                  SmartPhones
+                  <i class="icon-down icon-down_nav"></i>
+                </a>
+              </li>
+              <li class="nav-desktop__item nav-desktop__item_watch">
+                <a class="nav-desktop__link" href="#">
+                  <svg
+                    class="nav-desktop__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use xlink:href="i/sprite.svg#header-icon-watches" />
+                  </svg>
+                  Watches
+                  <i class="icon-down icon-down_nav"></i>
+                </a>
+              </li>
+              <li class="nav-desktop__item nav-desktop__item_tv">
+                <a class="nav-desktop__link" href="#">
+                  <svg
+                    class="nav-desktop__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use xlink:href="i/sprite.svg#header-icon-tv" />
+                  </svg>
+                  Tablets
+                  <i class="icon-down icon-down_nav"></i>
+                </a>
+              </li>
+              <li class="nav-desktop__item nav-desktop__item_tablets">
+                <a class="nav-desktop__link" href="#">
+                  <svg
+                    class="nav-desktop__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use xlink:href="i/sprite.svg#header-icon-tablets" />
+                  </svg>
+                  Tablets
+                  <i class="icon-down icon-down_nav"></i>
+                </a>
+              </li>
+              <li class="nav-desktop__item nav-desktop__item_gaming">
+                <a class="nav-desktop__link" href="#">
+                  <svg
+                    class="nav-desktop__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use xlink:href="i/sprite.svg#header-icon-gaming" />
+                  </svg>
+                  Gaming
+                  <i class="icon-down icon-down_nav"></i>
+                </a>
+              </li>
+            </ul>
+            <div class="container_computer">
+              <div class="nav-item-box nav-item-box_computer">
+                <ul class="nav-item-list">
+                  <li>PC’s</li>
+                  <li>Laptops</li>
+                  <li>Notebooks</li>
+                  <li>PC Accessories</li>
+                </ul>
+                <div class="nav-item-logo">
+                  <img
+                    src="img/bethemestore-nav-item-computer.svg"
+                    class="nav-item-img"
+                  />
+                </div>
+                <div class="nav-item-btn">
+                  <div class="nav-item-btn__content">
+                    <h3>Computers</h3>
+                    <h5>Customers choice</h5>
+                    <a href="#">Find out</a>
+                  </div>
+                  <div class="nav-item-btn__img-box">
+                    <img
+                      src="i/bethemestore-nav-pic-computer.webp"
+                      class="nav-item-btn__img"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container_smartphone">
+              <div class="nav-item-box nav-item-box_computer">
+                <ul class="nav-item-list">
+                  <li>5G Phones</li>
+                  <li>Phone accessories</li>
+                  <li>Prepaid phones</li>
+                  <li>Unlocked phones</li>
+                </ul>
+                <div class="nav-item-logo">
+                  <img
+                    src="img/bethemestore-nav-item-smartphone.svg"
+                    class="nav-item-img"
+                  />
+                </div>
+                <div class="nav-item-btn">
+                  <div class="nav-item-btn__content">
+                    <h3>Smartphones</h3>
+                    <h5>Our choice</h5>
+                    <a href="#">Find out</a>
+                  </div>
+                  <div class="nav-item-btn__img-box">
+                    <img
+                      src="i/bethemestore-nav-pic-smartphone.webp"
+                      class="nav-item-btn__img"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container_watch">
+              <div class="nav-item-box nav-item-box_watch">
+                <ul class="nav-item-list">
+                  <li>Fitness trackers</li>
+                  <li>Smart watches</li>
+                  <li>Smartwatch accessories</li>
+                </ul>
+                <div class="nav-item-logo">
+                  <img
+                    src="img/bethemestore-nav-item-watch.svg"
+                    class="nav-item-img"
+                  />
+                </div>
+                <div class="nav-item-btn">
+                  <div class="nav-item-btn__content">
+                    <h3>Watches</h3>
+                    <h5>Tech Awards</h5>
+                    <a href="#">Find out</a>
+                  </div>
+                  <div class="nav-item-btn__img-box">
+                    <img
+                      src="i/bethemestore-nav-pic-watch.webp"
+                      class="nav-item-btn__img"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container_tv">
+              <div class="nav-item-box nav-item-box_tv">
+                <ul class="nav-item-list">
+                  <li>Earphones</li>
+                  <li>Headphones</li>
+                  <li>Smart TV</li>
+                  <li>TV accessories</li>
+                </ul>
+                <div class="nav-item-logo">
+                  <img
+                    src="img/bethemestore-nav-item-tv.svg"
+                    class="nav-item-img"
+                  />
+                </div>
+                <div class="nav-item-btn">
+                  <div class="nav-item-btn__content">
+                    <h3>Bestsellers</h3>
+                    <h5>Customers choice</h5>
+                    <a href="#">Find out</a>
+                  </div>
+                  <div class="nav-item-btn__img-box">
+                    <img
+                      src="i/bethemestore-nav-pic-tv.webp"
+                      class="nav-item-btn__img"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container_tablets">
+              <div class="nav-item-box nav-item-box_tablets">
+                <ul class="nav-item-list">
+                  <li>Ebook-Readers</li>
+                  <li>Kids Tablets</li>
+                  <li>Tablet accessories</li>
+                </ul>
+                <div class="nav-item-logo">
+                  <img
+                    src="img/bethemestore-nav-item-tablets.svg"
+                    class="nav-item-img"
+                  />
+                </div>
+                <div class="nav-item-btn">
+                  <div class="nav-item-btn__content">
+                    <h3>Tablets</h3>
+                    <h5>Tech Awards</h5>
+                    <a href="#">Find out</a>
+                  </div>
+                  <div class="nav-item-btn__img-box">
+                    <img
+                      src="i/bethemestore-nav-pic-tablets.webp"
+                      class="nav-item-btn__img"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container_gaming">
+              <div class="nav-item-box nav-item-box_gaming">
+                <ul class="nav-item-list">
+                  <li>Audio</li>
+                  <li>Gaming accesories</li>
+                  <li>Gaming devices</li>
+                  <li>Gaming displays</li>
+                </ul>
+                <div class="nav-item-logo">
+                  <img
+                    src="img/bethemestore-nav-item-gaming.svg"
+                    class="nav-item-img"
+                  />
+                </div>
+                <div class="nav-item-btn">
+                  <div class="nav-item-btn__content">
+                    <h3>Gaming</h3>
+                    <h5>Top products</h5>
+                    <a href="#">Find out</a>
+                  </div>
+                  <div class="nav-item-btn__img-box">
+                    <img
+                      src="i/bethemestore-nav-pic-gamig.webp"
+                      class="nav-item-btn__img"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- /   DESKTOP menu END  -->
+            <!-- /   Mobile menu START  -->
+            <div class="dark-overlay"></div>
+            <div class="mobile-menu">
+              <span class="icon-close menu-button in-mobile active"></span>
+              <nav class="mobile-navigation">
+                <ul>
+                  <li class="has-submenu">
+                    <a class="is-submenu" href="#">
+                      <svg
+                        class="navigation-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <use xlink:href="i/sprite.svg#header-icon-computers" />
+                      </svg>
+                      Computers</a
+                    >
+                    <ul>
+                      <li><a href="#">PC’s</a></li>
+                      <li><a href="#">Laptops</a></li>
+                      <li><a href="#">Notebooks</a></li>
+                      <li><a href="#">PC Accessories</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="has-submenu">
+                    <a class="is-submenu" href="#">
+                      <svg
+                        class="navigation-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <use xlink:href="i/sprite.svg#header-icon-phones" />
+                      </svg>
+                      SmartPhones</a
+                    >
+                    <ul>
+                      <li><a href="#">5G Phones</a></li>
+                      <li><a href="#">Phone accessories</a></li>
+                      <li><a href="#">Prepaid phones</a></li>
+                      <li><a href="#">Unlocked phones</a></li>
+                    </ul>
+                  </li>
+                  <li class="has-submenu">
+                    <a class="is-submenu" href="#">
+                      <svg
+                        class="navigation-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <use xlink:href="i/sprite.svg#header-icon-watches" />
+                      </svg>
+                      Watches</a
+                    >
+                    <ul>
+                      <li><a href="#">Fitness trackers</a></li>
+                      <li><a href="#">Smart watches</a></li>
+                      <li><a href="#">Smartwatch accessories</a></li>
+                    </ul>
+                  </li>
+                  <li class="has-submenu">
+                    <a class="is-submenu" href="#">
+                      <svg
+                        class="navigation-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <use xlink:href="i/sprite.svg#header-icon-tv" />
+                      </svg>
+                      TV/Audio</a
+                    >
+                    <ul>
+                      <li><a href="#">Earphones</a></li>
+                      <li><a href="#">Headphones</a></li>
+                      <li><a href="#">Smart TV</a></li>
+                      <li><a href="#">TV accessories</a></li>
+                    </ul>
+                  </li>
+                  <li class="has-submenu">
+                    <a class="is-submenu" href="#">
+                      <svg
+                        class="navigation-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <use xlink:href="i/sprite.svg#header-icon-tablets" />
+                      </svg>
+                      Tablets</a
+                    >
+                    <ul>
+                      <li><a href="#">Ebook-Readers</a></li>
+                      <li><a href="#">Kids Tablets</a></li>
+                      <li><a href="#">Tablet accessories</a></li>
+                    </ul>
+                  </li>
+                  <li class="has-submenu">
+                    <a class="is-submenu" href="#">
+                      <svg
+                        class="navigation-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <use xlink:href="i/sprite.svg#header-icon-gaming" />
+                      </svg>
+                      Gaming</a
+                    >
+                    <ul>
+                      <li><a href="#">Audio</a></li>
+                      <li><a href="#">Gaming accesories</a></li>
+                      <li><a href="#">Gaming devices</a></li>
+                      <li><a href="#">Gaming displays</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </nav>
+        </div>
+        <!-- /   Mobile menu END  -->
+        <!-- ./nav-->
+      </header>
+    </div>
+    <main class="main">
+      <div class="container">
+        <div class="slider">
+          <div class="slide">
+            <img src="img/main-slider-1.jpg" />
+          </div>
+          <div class="slide">
+            <img src="img/main-slider-2.jpg" />
+          </div>
+          <div class="slide">
+            <img src="img/main-slider-3.webp" />
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <section class="quality-goods">
+          <h2 class="quality-goods__title">We provide high quality goods</h2>
+          <p class="quality-goods__desc">Customer happiness is our motto.</p>
+          <div class="quality-goods-box">
+            <div
+              class="quality-goods-box__item quality-goods-box__item_shipping"
+            >
+              <svg
+                class="quality-goods-box__icon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use xlink:href="i/sprite.svg#quality-goods-icon-shipping" />
+              </svg>
+              <h4 class="quality-goods-box__title">Free Shipping</h4>
+              <p class="quality-goods-box__desc">For all orders over $200</p>
+            </div>
+            <div
+              class="quality-goods-box__item quality-goods-box__item_promotions"
+            >
+              <svg
+                class="quality-goods-box__icon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use xlink:href="i/sprite.svg#quality-goods-icon-promotions" />
+              </svg>
+              <h4 class="quality-goods-box__title">Daily Promotions</h4>
+              <p class="quality-goods-box__desc">Discount up to 70%</p>
+            </div>
+            <div class="quality-goods-box__item">
+              <svg
+                class="quality-goods-box__icon quality-goods-box__icon_returns"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use xlink:href="i/sprite.svg#quality-goods-icon-returns" />
+              </svg>
+              <h4 class="quality-goods-box__title">Free Returns</h4>
+              <p class="quality-goods-box__desc">Return for up to 7 days</p>
+            </div>
+            <div class="quality-goods-box__item quality-goods-box__item_secure">
+              <svg
+                class="quality-goods-box__icon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use xlink:href="i/sprite.svg#quality-goods-icon-secure" />
+              </svg>
+              <h4 class="quality-goods-box__title">Secure payments</h4>
+              <p class="quality-goods-box__desc">Security guarantee</p>
+            </div>
+            <div class="quality-goods-box__item">
+              <svg
+                class="quality-goods-box__icon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use xlink:href="i/sprite.svg#quality-goods-icon-gifts" />
+              </svg>
+              <h4 class="quality-goods-box__title">Gifts for members</h4>
+              <p class="quality-goods-box__desc">Bonuses for members</p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!--./quality-goods-->
+      <div class="container container_recommendation">
+        <section class="recommendation">
+          <div class="recommendation-block">
+            <article
+              class="recommendation-block-box recommendation-block-box_one"
+            >
+              <div
+                class="recommendation-block-box__img recommendation-block-box__img_one"
+              >
+                <div class="recommendation-desc">
+                  <h2 class="recommendation-desc__title">BeWatch GT</h2>
+                  <h5 class="recommendation-desc__desc">Our recommendation</h5>
+                  <p class="recommendation-desc__text">
+                    Dolor dictumst pretium
+                  </p>
+                  <a class="recommendation-desc__btn" href="page-not-found.html"
+                    ><span class="btn-label">Buy now</span></a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="recommendation-block">
+            <article
+              class="recommendation-block-box recommendation-block-box_two"
+            >
+              <div
+                class="recommendation-block-box__img recommendation-block-box__img_two"
+              >
+                <div class="recommendation-desc recommendation-desc">
+                  <h2
+                    class="recommendation-desc__title recommendation-desc__title_two"
+                  >
+                    BeSound
+                  </h2>
+                  <h5
+                    class="recommendation-desc__desc recommendation-desc__desc_two"
+                  >
+                    Our recommendation
+                  </h5>
+                  <p
+                    class="recommendation-desc__text recommendation-desc__text_two"
+                  >
+                    Dolor dictumst pretium
+                  </p>
+                  <a class="recommendation-desc__btn" href="#"
+                    ><span class="btn-label">Products</span></a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <!--./recommendation-->
+      </div>
+      <div class="container-grey container-grey_top-rated-products">
+        <div class="container">
+          <section class="top-rated-products">
+            <h2 class="top-rated-products__title">Top rated products</h2>
+            <p class="top-rated-products__desc">Best choice</p>
+            <div class="products-box">
+              <ul
+                class="products-box__list products-box__list_top-rated-products"
+              >
+                <li class="products-box__item">
+                  <a class="products-box__link" href="#"
+                    ><h4 class="products-box__title">BeHeadphones2</h4></a
+                  >
+                  <div class="rated">
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                  </div>
+                  <span class="price-box">
+                    <i class="icon-dollar"></i>
+                    <span class="price-box__price">430.00</span>
+                  </span>
+                  <div class="cart-box">
+                    <span class="cart-box__add">Add to cart</span>
+                    <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="i/sprite.svg#cart" />
+                    </svg>
+                  </div>
+                  <div class="products-box-img">
+                    <img
+                      src="img/bethemestore2-products-headphones.webp"
+                      class="products-box-img__img"
+                      srcset="
+                        img/bethemestore2-products-headphones-800x800.webp    800w,
+                        img/bethemestore2-products-headphones-500x500.webp    500w,
+                        img/bethemestore2-products-headphones-350x350.webp    350w,
+                        img/bethemestore2-products-headphones-768x768.webp    768w,
+                        img/bethemestore2-products-headphones-300x300.webp    300w,
+                        img/bethemestore2-products-headphones-1200x1200.webp 1200w
+                      "
+                      sizes="(max-width:767px) 480px, (max-width:800px) 100vw, 800px"
+                    />
+                  </div>
+                  <span class="label hot-label">Hot</span>
+                  <div class="product-box-icon">
+                    <a
+                      class="product-box-icon__link product-box-icon__link_link"
+                      href="#"
+                    >
+                      <svg
+                        class="product-icon product-icon_link"
+                        viewBox="0 0 26 26"
+                      >
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <g>
+                          <path
+                            d="M10.17,8.76l2.12-2.12a5,5,0,0,1,7.07,0h0a5,5,0,0,1,0,7.07l-2.12,2.12"
+                            class="path"
+                          ></path>
+                          <path
+                            d="M15.83,17.24l-2.12,2.12a5,5,0,0,1-7.07,0h0a5,5,0,0,1,0-7.07l2.12-2.12"
+                            class="path"
+                          ></path>
+                          <line
+                            x1="10.17"
+                            y1="15.83"
+                            x2="15.83"
+                            y2="10.17"
+                            class="path"
+                          ></line>
+                        </g></svg
+                    ></a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_wishlist"
+                    >
+                      <svg class="product-icon" width="26" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <path
+                          class="path"
+                          d="M16.7,6a3.78,3.78,0,0,0-2.3.8A5.26,5.26,0,0,0,13,8.5a5,5,0,0,0-1.4-1.6A3.52,3.52,0,0,0,9.3,6a4.33,4.33,0,0,0-4.2,4.6c0,2.8,2.3,4.7,5.7,7.7.6.5,1.2,1.1,1.9,1.7H13a.37.37,0,0,0,.3-.1c.7-.6,1.3-1.2,1.9-1.7,3.4-2.9,5.7-4.8,5.7-7.7A4.3,4.3,0,0,0,16.7,6Z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_preview"
+                      ><svg class="product-icon" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <line
+                          x1="7"
+                          y1="7"
+                          x2="11.29"
+                          y2="11.29"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="14.62"
+                          y1="14.62"
+                          x2="18.91"
+                          y2="18.91"
+                          class="path"
+                        ></line>
+                        <polyline
+                          points="7 15.57 7 19 10.43 19"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="15.57 19 19 19 19 15.57"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="10.43 7 7 7 7 10.43"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="19 10.43 19 7 15.57 7"
+                          class="path"
+                        ></polyline>
+                        <line
+                          x1="14.71"
+                          y1="11.29"
+                          x2="19"
+                          y2="7"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="7"
+                          y1="19"
+                          x2="11.29"
+                          y2="14.71"
+                          class="path"
+                        ></line></svg
+                    ></a>
+                  </div>
+                </li>
+
+                <li class="products-box__item">
+                  <a class="products-box__link" href="#"
+                    ><h4 class="products-box__title">BeMouse1</h4></a
+                  >
+                  <div class="rated">
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                  </div>
+                  <span class="price-box">
+                    <i class="icon-dollar"></i>
+                    <span class="price-box__price">68.99</span>
+                  </span>
+                  <div class="cart-box">
+                    <span class="cart-box__add">Add to cart</span>
+                    <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="i/sprite.svg#cart" />
+                    </svg>
+                  </div>
+                  <div class="products-box-img">
+                    <img
+                      src="img/bethemestore2-products-mouse.webp"
+                      class="products-box-img__img"
+                      srcset="
+                        img/bethemestore2-products-mouse-800x800.webp    800w,
+                        img/bethemestore2-products-mouse-500x500.webp    500w,
+                        img/bethemestore2-products-mouse-350x350.webp    350w,
+                        img/bethemestore2-products-mouse-768x768.webp    768w,
+                        img/bethemestore2-products-mouse-300x300.webp    300w,
+                        img/bethemestore2-products-mouse-1200x1200.webp 1200w
+                      "
+                      sizes="(max-width:767px) 480px, (max-width:800px) 100vw, 800px"
+                    />
+                  </div>
+                  <span class="label sold-out-label">Sold out</span>
+                  <div class="product-box-icon">
+                    <a
+                      class="product-box-icon__link product-box-icon__link_link"
+                      href="#"
+                    >
+                      <svg
+                        class="product-icon product-icon_link"
+                        viewBox="0 0 26 26"
+                      >
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <g>
+                          <path
+                            d="M10.17,8.76l2.12-2.12a5,5,0,0,1,7.07,0h0a5,5,0,0,1,0,7.07l-2.12,2.12"
+                            class="path"
+                          ></path>
+                          <path
+                            d="M15.83,17.24l-2.12,2.12a5,5,0,0,1-7.07,0h0a5,5,0,0,1,0-7.07l2.12-2.12"
+                            class="path"
+                          ></path>
+                          <line
+                            x1="10.17"
+                            y1="15.83"
+                            x2="15.83"
+                            y2="10.17"
+                            class="path"
+                          ></line>
+                        </g></svg
+                    ></a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_wishlist"
+                    >
+                      <svg class="product-icon" width="26" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <path
+                          class="path"
+                          d="M16.7,6a3.78,3.78,0,0,0-2.3.8A5.26,5.26,0,0,0,13,8.5a5,5,0,0,0-1.4-1.6A3.52,3.52,0,0,0,9.3,6a4.33,4.33,0,0,0-4.2,4.6c0,2.8,2.3,4.7,5.7,7.7.6.5,1.2,1.1,1.9,1.7H13a.37.37,0,0,0,.3-.1c.7-.6,1.3-1.2,1.9-1.7,3.4-2.9,5.7-4.8,5.7-7.7A4.3,4.3,0,0,0,16.7,6Z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_preview"
+                      ><svg class="product-icon" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <line
+                          x1="7"
+                          y1="7"
+                          x2="11.29"
+                          y2="11.29"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="14.62"
+                          y1="14.62"
+                          x2="18.91"
+                          y2="18.91"
+                          class="path"
+                        ></line>
+                        <polyline
+                          points="7 15.57 7 19 10.43 19"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="15.57 19 19 19 19 15.57"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="10.43 7 7 7 7 10.43"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="19 10.43 19 7 15.57 7"
+                          class="path"
+                        ></polyline>
+                        <line
+                          x1="14.71"
+                          y1="11.29"
+                          x2="19"
+                          y2="7"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="7"
+                          y1="19"
+                          x2="11.29"
+                          y2="14.71"
+                          class="path"
+                        ></line></svg
+                    ></a>
+                  </div>
+                </li>
+
+                <li class="products-box__item">
+                  <a class="products-box__link" href="#"
+                    ><h4 class="products-box__title">BeNotebook2</h4></a
+                  >
+                  <div class="rated">
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                  </div>
+                  <span class="price-box">
+                    <i class="icon-dollar"></i>
+                    <span class="price-box__price">2,500.00</span>
+                  </span>
+                  <div class="cart-box">
+                    <span class="cart-box__add">Add to cart</span>
+                    <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="i/sprite.svg#cart" />
+                    </svg>
+                  </div>
+                  <div class="products-box-img">
+                    <img
+                      src="bethemestore2-products-notebook.webp"
+                      class="products-box-img__img"
+                      srcset="
+                        img/bethemestore2-products-notebook-800x800.webp    800w,
+                        img/bethemestore2-products-notebook-500x500.webp    500w,
+                        img/bethemestore2-products-notebook-350x350.webp    350w,
+                        img/bethemestore2-products-notebook-768x768.webp    768w,
+                        img/bethemestore2-products-notebook-300x300.webp    300w,
+                        img/bethemestore2-products-notebook-1200x1200.webp 1200w
+                      "
+                      sizes="(max-width:767px) 480px, (max-width:800px) 100vw, 800px"
+                    />
+                  </div>
+                  <span class="label new-label">New</span>
+                  <div class="product-box-icon">
+                    <a
+                      class="product-box-icon__link product-box-icon__link_link"
+                      href="#"
+                    >
+                      <svg
+                        class="product-icon product-icon_link"
+                        viewBox="0 0 26 26"
+                      >
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <g>
+                          <path
+                            d="M10.17,8.76l2.12-2.12a5,5,0,0,1,7.07,0h0a5,5,0,0,1,0,7.07l-2.12,2.12"
+                            class="path"
+                          ></path>
+                          <path
+                            d="M15.83,17.24l-2.12,2.12a5,5,0,0,1-7.07,0h0a5,5,0,0,1,0-7.07l2.12-2.12"
+                            class="path"
+                          ></path>
+                          <line
+                            x1="10.17"
+                            y1="15.83"
+                            x2="15.83"
+                            y2="10.17"
+                            class="path"
+                          ></line>
+                        </g></svg
+                    ></a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_wishlist"
+                    >
+                      <svg class="product-icon" width="26" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <path
+                          class="path"
+                          d="M16.7,6a3.78,3.78,0,0,0-2.3.8A5.26,5.26,0,0,0,13,8.5a5,5,0,0,0-1.4-1.6A3.52,3.52,0,0,0,9.3,6a4.33,4.33,0,0,0-4.2,4.6c0,2.8,2.3,4.7,5.7,7.7.6.5,1.2,1.1,1.9,1.7H13a.37.37,0,0,0,.3-.1c.7-.6,1.3-1.2,1.9-1.7,3.4-2.9,5.7-4.8,5.7-7.7A4.3,4.3,0,0,0,16.7,6Z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_preview"
+                      ><svg class="product-icon" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <line
+                          x1="7"
+                          y1="7"
+                          x2="11.29"
+                          y2="11.29"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="14.62"
+                          y1="14.62"
+                          x2="18.91"
+                          y2="18.91"
+                          class="path"
+                        ></line>
+                        <polyline
+                          points="7 15.57 7 19 10.43 19"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="15.57 19 19 19 19 15.57"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="10.43 7 7 7 7 10.43"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="19 10.43 19 7 15.57 7"
+                          class="path"
+                        ></polyline>
+                        <line
+                          x1="14.71"
+                          y1="11.29"
+                          x2="19"
+                          y2="7"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="7"
+                          y1="19"
+                          x2="11.29"
+                          y2="14.71"
+                          class="path"
+                        ></line></svg
+                    ></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!--./top-rated-products-->
+
+      <div class="container-grey">
+        <div class="container">
+          <section class="special-offer">
+            <div class="special-offer-box">
+              <div class="col col_one">
+                <div class="img-wrapper"></div>
+              </div>
+              <div class="col col_two">
+                <h2 class="special-offer-box__title">Special offer</h2>
+                <span class="special-offer-box__span">BePhone 12 Pro</span>
+                <div class="counter">
+                  <div class="counter__item counter__item_days">
+                    <div class="number-wrapper">
+                      <span class="number-wrapper__count" id="days">00</span>
+                      <h3 class="number-wrapper__title">days</h3>
+                    </div>
+                  </div>
+                  <div class="counter__item counter__item_days">
+                    <div class="number-wrapper">
+                      <span class="number-wrapper__count" id="hours">00</span>
+                      <h3 class="number-wrapper__title">hours</h3>
+                    </div>
+                  </div>
+                  <div class="counter__item counter__item_days">
+                    <div class="number-wrapper">
+                      <span class="number-wrapper__count" id="minutes">00</span>
+                      <h3 class="number-wrapper__title">minutes</h3>
+                    </div>
+                  </div>
+                  <div class="counter__item counter__item_days">
+                    <div class="number-wrapper">
+                      <span class="number-wrapper__count" id="seconds">00</span>
+                      <h3 class="number-wrapper__title">seconds</h3>
+                    </div>
+                  </div>
+                </div>
+                <span class="special-offer-box__name">BePhone 12 Pro</span>
+                <span class="special-offer-box__price">299$ USD</span>
+                <a class="special-offer-box__btn-wrapper" href="#"
+                  ><span class="special-offer-box__btn">Buy now</span></a
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="container-grey">
+        <div class="container">
+          <section class="newest-products">
+            <h2 class="newest-products__title">Our newest products</h2>
+            <p class="newest-products__desc">Best choice</p>
+            <div class="products-box">
+              <ul class="products-box__list products-box__list_newest-products">
+                <li class="products-box__item">
+                  <a class="products-box__link" href="#"
+                    ><h4 class="products-box__title">BeNotebook2</h4></a
+                  >
+                  <div class="rated">
+                    <i class="icon-star-empty"></i>
+                    <i class="icon-star-empty"></i>
+                    <i class="icon-star-empty"></i>
+                    <i class="icon-star-empty"></i>
+                    <i class="icon-star-empty"></i>
+                  </div>
+                  <span class="price-box">
+                    <i class="icon-dollar"></i>
+                    <span class="price-box__price">2,500.00 - 5,300.00</span>
+                  </span>
+                  <div class="cart-box">
+                    <span class="cart-box__add">Add to cart</span>
+                    <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="i/sprite.svg#cart" />
+                    </svg>
+                  </div>
+                  <div class="products-box-img">
+                    <img
+                      src="bethemestore2-products-notebook.webp"
+                      class="products-box-img__img"
+                      srcset="
+                        img/bethemestore2-products-notebook-800x800.webp    800w,
+                        img/bethemestore2-products-notebook-500x500.webp    500w,
+                        img/bethemestore2-products-notebook-350x350.webp    350w,
+                        img/bethemestore2-products-notebook-768x768.webp    768w,
+                        img/bethemestore2-products-notebook-300x300.webp    300w,
+                        img/bethemestore2-products-notebook-1200x1200.webp 1200w
+                      "
+                      sizes="(max-width:767px) 480px, (max-width:800px) 100vw, 800px"
+                    />
+                  </div>
+                  <span class="label new-label">New</span>
+                  <div class="product-box-icon">
+                    <a
+                      class="product-box-icon__link product-box-icon__link_link"
+                      href="#"
+                    >
+                      <svg
+                        class="product-icon product-icon_link"
+                        viewBox="0 0 26 26"
+                      >
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <g>
+                          <path
+                            d="M10.17,8.76l2.12-2.12a5,5,0,0,1,7.07,0h0a5,5,0,0,1,0,7.07l-2.12,2.12"
+                            class="path"
+                          ></path>
+                          <path
+                            d="M15.83,17.24l-2.12,2.12a5,5,0,0,1-7.07,0h0a5,5,0,0,1,0-7.07l2.12-2.12"
+                            class="path"
+                          ></path>
+                          <line
+                            x1="10.17"
+                            y1="15.83"
+                            x2="15.83"
+                            y2="10.17"
+                            class="path"
+                          ></line>
+                        </g></svg
+                    ></a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_wishlist"
+                    >
+                      <svg class="product-icon" width="26" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <path
+                          class="path"
+                          d="M16.7,6a3.78,3.78,0,0,0-2.3.8A5.26,5.26,0,0,0,13,8.5a5,5,0,0,0-1.4-1.6A3.52,3.52,0,0,0,9.3,6a4.33,4.33,0,0,0-4.2,4.6c0,2.8,2.3,4.7,5.7,7.7.6.5,1.2,1.1,1.9,1.7H13a.37.37,0,0,0,.3-.1c.7-.6,1.3-1.2,1.9-1.7,3.4-2.9,5.7-4.8,5.7-7.7A4.3,4.3,0,0,0,16.7,6Z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_preview"
+                      ><svg class="product-icon" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <line
+                          x1="7"
+                          y1="7"
+                          x2="11.29"
+                          y2="11.29"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="14.62"
+                          y1="14.62"
+                          x2="18.91"
+                          y2="18.91"
+                          class="path"
+                        ></line>
+                        <polyline
+                          points="7 15.57 7 19 10.43 19"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="15.57 19 19 19 19 15.57"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="10.43 7 7 7 7 10.43"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="19 10.43 19 7 15.57 7"
+                          class="path"
+                        ></polyline>
+                        <line
+                          x1="14.71"
+                          y1="11.29"
+                          x2="19"
+                          y2="7"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="7"
+                          y1="19"
+                          x2="11.29"
+                          y2="14.71"
+                          class="path"
+                        ></line></svg
+                    ></a>
+                  </div>
+                </li>
+
+                <li class="products-box__item">
+                  <a class="products-box__link" href="#"
+                    ><h4 class="products-box__title">BeHeadphones2</h4></a
+                  >
+                  <div class="rated">
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                  </div>
+                  <span class="price-box">
+                    <i class="icon-dollar"></i>
+                    <span class="price-box__price">430.00</span>
+                  </span>
+                  <div class="cart-box">
+                    <span class="cart-box__add">Add to cart</span>
+                    <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="i/sprite.svg#cart" />
+                    </svg>
+                  </div>
+                  <div class="products-box-img">
+                    <img
+                      src="img/bethemestore2-products-headphones.webp"
+                      class="products-box-img__img"
+                      srcset="
+                        img/bethemestore2-products-headphones-800x800.webp    800w,
+                        img/bethemestore2-products-headphones-500x500.webp    500w,
+                        img/bethemestore2-products-headphones-350x350.webp    350w,
+                        img/bethemestore2-products-headphones-768x768.webp    768w,
+                        img/bethemestore2-products-headphones-300x300.webp    300w,
+                        img/bethemestore2-products-headphones-1200x1200.webp 1200w
+                      "
+                      sizes="(max-width:767px) 480px, (max-width:800px) 100vw, 800px"
+                    />
+                  </div>
+                  <span class="label hot-label">Hot</span>
+                  <div class="product-box-icon">
+                    <a
+                      class="product-box-icon__link product-box-icon__link_link"
+                      href="#"
+                    >
+                      <svg
+                        class="product-icon product-icon_link"
+                        viewBox="0 0 26 26"
+                      >
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <g>
+                          <path
+                            d="M10.17,8.76l2.12-2.12a5,5,0,0,1,7.07,0h0a5,5,0,0,1,0,7.07l-2.12,2.12"
+                            class="path"
+                          ></path>
+                          <path
+                            d="M15.83,17.24l-2.12,2.12a5,5,0,0,1-7.07,0h0a5,5,0,0,1,0-7.07l2.12-2.12"
+                            class="path"
+                          ></path>
+                          <line
+                            x1="10.17"
+                            y1="15.83"
+                            x2="15.83"
+                            y2="10.17"
+                            class="path"
+                          ></line>
+                        </g></svg
+                    ></a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_wishlist"
+                    >
+                      <svg class="product-icon" width="26" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <path
+                          class="path"
+                          d="M16.7,6a3.78,3.78,0,0,0-2.3.8A5.26,5.26,0,0,0,13,8.5a5,5,0,0,0-1.4-1.6A3.52,3.52,0,0,0,9.3,6a4.33,4.33,0,0,0-4.2,4.6c0,2.8,2.3,4.7,5.7,7.7.6.5,1.2,1.1,1.9,1.7H13a.37.37,0,0,0,.3-.1c.7-.6,1.3-1.2,1.9-1.7,3.4-2.9,5.7-4.8,5.7-7.7A4.3,4.3,0,0,0,16.7,6Z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_preview"
+                      ><svg class="product-icon" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <line
+                          x1="7"
+                          y1="7"
+                          x2="11.29"
+                          y2="11.29"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="14.62"
+                          y1="14.62"
+                          x2="18.91"
+                          y2="18.91"
+                          class="path"
+                        ></line>
+                        <polyline
+                          points="7 15.57 7 19 10.43 19"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="15.57 19 19 19 19 15.57"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="10.43 7 7 7 7 10.43"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="19 10.43 19 7 15.57 7"
+                          class="path"
+                        ></polyline>
+                        <line
+                          x1="14.71"
+                          y1="11.29"
+                          x2="19"
+                          y2="7"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="7"
+                          y1="19"
+                          x2="11.29"
+                          y2="14.71"
+                          class="path"
+                        ></line></svg
+                    ></a>
+                  </div>
+                </li>
+
+                <li class="products-box__item">
+                  <a class="products-box__link" href="#"
+                    ><h4 class="products-box__title">BeSmartphone2</h4></a
+                  >
+                  <div class="rated">
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-empty"></i>
+                  </div>
+                  <span class="price-box">
+                    <i class="icon-dollar"></i>
+                    <span class="price-box__price">220.00-320.00</span>
+                  </span>
+                  <div class="cart-box">
+                    <span class="cart-box__add">Add to cart</span>
+                    <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="i/sprite.svg#cart" />
+                    </svg>
+                  </div>
+                  <div class="products-box-img">
+                    <img
+                      src="img/bethemestore-product-pic-besmartphone2.webp"
+                      class="products-box-img__img"
+                      srcset="
+                        img/bethemestore2-product-smartphone-800x800.webp    800w,
+                        img/bethemestore2-product-smartphone-500x500.webp    500w,
+                        img/bethemestore2-product-smartphone--350x350..webp  350w,
+                        img/bethemestore2-product-smartphone-768x769.webp    768w,
+                        img/bethemestore2-product-smartphone-300x300.webp    300w,
+                        img/bethemestore2-product-smartphone-1200x1200.webp 1200w
+                      "
+                      sizes="(max-width:767px) 480px, (max-width:800px) 100vw, 800px"
+                    />
+                  </div>
+                  <span class="label on-sale-label">On sale</span>
+                  <div class="product-box-icon">
+                    <a
+                      class="product-box-icon__link product-box-icon__link_link"
+                      href="about.html"
+                    >
+                      <svg
+                        class="product-icon product-icon_link"
+                        viewBox="0 0 26 26"
+                      >
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <g>
+                          <path
+                            d="M10.17,8.76l2.12-2.12a5,5,0,0,1,7.07,0h0a5,5,0,0,1,0,7.07l-2.12,2.12"
+                            class="path"
+                          ></path>
+                          <path
+                            d="M15.83,17.24l-2.12,2.12a5,5,0,0,1-7.07,0h0a5,5,0,0,1,0-7.07l2.12-2.12"
+                            class="path"
+                          ></path>
+                          <line
+                            x1="10.17"
+                            y1="15.83"
+                            x2="15.83"
+                            y2="10.17"
+                            class="path"
+                          ></line>
+                        </g></svg
+                    ></a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_wishlist"
+                    >
+                      <svg class="product-icon" width="26" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <path
+                          class="path"
+                          d="M16.7,6a3.78,3.78,0,0,0-2.3.8A5.26,5.26,0,0,0,13,8.5a5,5,0,0,0-1.4-1.6A3.52,3.52,0,0,0,9.3,6a4.33,4.33,0,0,0-4.2,4.6c0,2.8,2.3,4.7,5.7,7.7.6.5,1.2,1.1,1.9,1.7H13a.37.37,0,0,0,.3-.1c.7-.6,1.3-1.2,1.9-1.7,3.4-2.9,5.7-4.8,5.7-7.7A4.3,4.3,0,0,0,16.7,6Z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_preview product-box-icon__link_preview_smartphone2"
+                      ><svg class="product-icon" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <line
+                          x1="7"
+                          y1="7"
+                          x2="11.29"
+                          y2="11.29"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="14.62"
+                          y1="14.62"
+                          x2="18.91"
+                          y2="18.91"
+                          class="path"
+                        ></line>
+                        <polyline
+                          points="7 15.57 7 19 10.43 19"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="15.57 19 19 19 19 15.57"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="10.43 7 7 7 7 10.43"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="19 10.43 19 7 15.57 7"
+                          class="path"
+                        ></polyline>
+                        <line
+                          x1="14.71"
+                          y1="11.29"
+                          x2="19"
+                          y2="7"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="7"
+                          y1="19"
+                          x2="11.29"
+                          y2="14.71"
+                          class="path"
+                        ></line></svg
+                    ></a>
+                  </div>
+                </li>
+
+                <li class="products-box__item">
+                  <a class="products-box__link" href="#"
+                    ><h4 class="products-box__title">BeSmartWatch3</h4></a
+                  >
+                  <div class="rated">
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                  </div>
+                  <span class="price-box">
+                    <i class="icon-dollar"></i>
+                    <span class="price-box__price">118.00-180.00</span>
+                  </span>
+                  <div class="cart-box">
+                    <span class="cart-box__add">Add to cart</span>
+                    <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="i/sprite.svg#cart" />
+                    </svg>
+                  </div>
+                  <div class="products-box-img">
+                    <img
+                      src="bethemestore2-products-watch3.webp"
+                      class="products-box-img__img"
+                      srcset="
+                        img/bethemestore2-products-watch3-800x800.webp    800w,
+                        img/bethemestore2-products-watch3-500x500.webp    500w,
+                        img/bethemestore2-products-watch3-350x350.webp    350w,
+                        img/bethemestore2-products-watch3-768x768.webp    768w,
+                        img/bethemestore2-products-watch3-300x300.webp    300w,
+                        img/bethemestore2-products-watch3-1200x1200.webp 1200w
+                      "
+                      sizes="(max-width:767px) 480px, (max-width:800px) 100vw, 800px"
+                    />
+                  </div>
+                  <span class="label on-sale-label">On sale</span>
+                  <div class="product-box-icon">
+                    <a
+                      class="product-box-icon__link product-box-icon__link_link"
+                      href="#"
+                    >
+                      <svg
+                        class="product-icon product-icon_link"
+                        viewBox="0 0 26 26"
+                      >
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <g>
+                          <path
+                            d="M10.17,8.76l2.12-2.12a5,5,0,0,1,7.07,0h0a5,5,0,0,1,0,7.07l-2.12,2.12"
+                            class="path"
+                          ></path>
+                          <path
+                            d="M15.83,17.24l-2.12,2.12a5,5,0,0,1-7.07,0h0a5,5,0,0,1,0-7.07l2.12-2.12"
+                            class="path"
+                          ></path>
+                          <line
+                            x1="10.17"
+                            y1="15.83"
+                            x2="15.83"
+                            y2="10.17"
+                            class="path"
+                          ></line>
+                        </g></svg
+                    ></a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_wishlist"
+                    >
+                      <svg class="product-icon" width="26" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <path
+                          class="path"
+                          d="M16.7,6a3.78,3.78,0,0,0-2.3.8A5.26,5.26,0,0,0,13,8.5a5,5,0,0,0-1.4-1.6A3.52,3.52,0,0,0,9.3,6a4.33,4.33,0,0,0-4.2,4.6c0,2.8,2.3,4.7,5.7,7.7.6.5,1.2,1.1,1.9,1.7H13a.37.37,0,0,0,.3-.1c.7-.6,1.3-1.2,1.9-1.7,3.4-2.9,5.7-4.8,5.7-7.7A4.3,4.3,0,0,0,16.7,6Z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_preview"
+                      ><svg class="product-icon" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <line
+                          x1="7"
+                          y1="7"
+                          x2="11.29"
+                          y2="11.29"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="14.62"
+                          y1="14.62"
+                          x2="18.91"
+                          y2="18.91"
+                          class="path"
+                        ></line>
+                        <polyline
+                          points="7 15.57 7 19 10.43 19"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="15.57 19 19 19 19 15.57"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="10.43 7 7 7 7 10.43"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="19 10.43 19 7 15.57 7"
+                          class="path"
+                        ></polyline>
+                        <line
+                          x1="14.71"
+                          y1="11.29"
+                          x2="19"
+                          y2="7"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="7"
+                          y1="19"
+                          x2="11.29"
+                          y2="14.71"
+                          class="path"
+                        ></line></svg
+                    ></a>
+                  </div>
+                </li>
+
+                <li class="products-box__item">
+                  <a class="products-box__link" href="#"
+                    ><h4 class="products-box__title">BeTablet2</h4></a
+                  >
+                  <div class="rated">
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                  </div>
+                  <span class="price-box">
+                    <i class="icon-dollar"></i>
+                    <span class="price-box__price">320.00-480.00</span>
+                  </span>
+                  <div class="cart-box">
+                    <span class="cart-box__add">Add to cart</span>
+                    <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="i/sprite.svg#cart" />
+                    </svg>
+                  </div>
+                  <div class="products-box-img">
+                    <img
+                      src="bethemestore2-products-betablet.webp"
+                      class="products-box-img__img"
+                      srcset="
+                        img/bethemestore2-products-betablet-800x800.webp    800w,
+                        img/bethemestore2-products-betablet-500x500.webp    500w,
+                        img/bethemestore2-products-betablet-350x350.webp    350w,
+                        img/bethemestore2-products-betablet-768x768.webp    768w,
+                        img/bethemestore2-products-betablet-300x300.webp    300w,
+                        img/bethemestore2-products-betablet-1200x1200.webp 1200w
+                      "
+                      sizes="(max-width:767px) 480px, (max-width:800px) 100vw, 800px"
+                    />
+                  </div>
+                  <span class="label on-sale-label">On sale</span>
+                  <div class="product-box-icon">
+                    <a
+                      class="product-box-icon__link product-box-icon__link_link"
+                      href="#"
+                    >
+                      <svg
+                        class="product-icon product-icon_link"
+                        viewBox="0 0 26 26"
+                      >
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <g>
+                          <path
+                            d="M10.17,8.76l2.12-2.12a5,5,0,0,1,7.07,0h0a5,5,0,0,1,0,7.07l-2.12,2.12"
+                            class="path"
+                          ></path>
+                          <path
+                            d="M15.83,17.24l-2.12,2.12a5,5,0,0,1-7.07,0h0a5,5,0,0,1,0-7.07l2.12-2.12"
+                            class="path"
+                          ></path>
+                          <line
+                            x1="10.17"
+                            y1="15.83"
+                            x2="15.83"
+                            y2="10.17"
+                            class="path"
+                          ></line>
+                        </g></svg
+                    ></a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_wishlist"
+                    >
+                      <svg class="product-icon" width="26" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <path
+                          class="path"
+                          d="M16.7,6a3.78,3.78,0,0,0-2.3.8A5.26,5.26,0,0,0,13,8.5a5,5,0,0,0-1.4-1.6A3.52,3.52,0,0,0,9.3,6a4.33,4.33,0,0,0-4.2,4.6c0,2.8,2.3,4.7,5.7,7.7.6.5,1.2,1.1,1.9,1.7H13a.37.37,0,0,0,.3-.1c.7-.6,1.3-1.2,1.9-1.7,3.4-2.9,5.7-4.8,5.7-7.7A4.3,4.3,0,0,0,16.7,6Z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_preview"
+                      ><svg class="product-icon" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <line
+                          x1="7"
+                          y1="7"
+                          x2="11.29"
+                          y2="11.29"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="14.62"
+                          y1="14.62"
+                          x2="18.91"
+                          y2="18.91"
+                          class="path"
+                        ></line>
+                        <polyline
+                          points="7 15.57 7 19 10.43 19"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="15.57 19 19 19 19 15.57"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="10.43 7 7 7 7 10.43"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="19 10.43 19 7 15.57 7"
+                          class="path"
+                        ></polyline>
+                        <line
+                          x1="14.71"
+                          y1="11.29"
+                          x2="19"
+                          y2="7"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="7"
+                          y1="19"
+                          x2="11.29"
+                          y2="14.71"
+                          class="path"
+                        ></line></svg
+                    ></a>
+                  </div>
+                </li>
+
+                <li class="products-box__item">
+                  <a class="products-box__link" href="#"
+                    ><h4 class="products-box__title">BeSmartWatch2</h4></a
+                  >
+                  <div class="rated">
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-empty"></i>
+                  </div>
+                  <span class="price-box">
+                    <i class="icon-dollar"></i>
+                    <span class="price-box__price">150.00-250.00</span>
+                  </span>
+                  <div class="cart-box">
+                    <span class="cart-box__add">Add to cart</span>
+                    <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="i/sprite.svg#cart" />
+                    </svg>
+                  </div>
+                  <div class="products-box-img">
+                    <img
+                      src="img/bethemestore2-products-watch2.webp"
+                      class="products-box-img__img"
+                      srcset="
+                        img/bethemestore2-products-watch2-800x800.webp    800w,
+                        img/bethemestore2-products-watch2-500x500.webp    500w,
+                        img/bethemestore2-products-watch2-350x350.webp    350w,
+                        img/bethemestore2-products-watch2-768x768.webp    768w,
+                        img/bethemestore2-products-watch2-300x300.webp    300w,
+                        img/bethemestore2-products-watch2-1200x1200.webp 1200w
+                      "
+                      sizes="(max-width:767px) 480px, (max-width:800px) 100vw, 800px"
+                    />
+                  </div>
+                  <span class="label on-sale-label">On sale</span>
+                  <div class="product-box-icon">
+                    <a
+                      class="product-box-icon__link product-box-icon__link_link"
+                      href="#"
+                    >
+                      <svg
+                        class="product-icon product-icon_link"
+                        viewBox="0 0 26 26"
+                      >
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <g>
+                          <path
+                            d="M10.17,8.76l2.12-2.12a5,5,0,0,1,7.07,0h0a5,5,0,0,1,0,7.07l-2.12,2.12"
+                            class="path"
+                          ></path>
+                          <path
+                            d="M15.83,17.24l-2.12,2.12a5,5,0,0,1-7.07,0h0a5,5,0,0,1,0-7.07l2.12-2.12"
+                            class="path"
+                          ></path>
+                          <line
+                            x1="10.17"
+                            y1="15.83"
+                            x2="15.83"
+                            y2="10.17"
+                            class="path"
+                          ></line>
+                        </g></svg
+                    ></a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_wishlist"
+                    >
+                      <svg class="product-icon" width="26" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <path
+                          class="path"
+                          d="M16.7,6a3.78,3.78,0,0,0-2.3.8A5.26,5.26,0,0,0,13,8.5a5,5,0,0,0-1.4-1.6A3.52,3.52,0,0,0,9.3,6a4.33,4.33,0,0,0-4.2,4.6c0,2.8,2.3,4.7,5.7,7.7.6.5,1.2,1.1,1.9,1.7H13a.37.37,0,0,0,.3-.1c.7-.6,1.3-1.2,1.9-1.7,3.4-2.9,5.7-4.8,5.7-7.7A4.3,4.3,0,0,0,16.7,6Z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_preview"
+                      ><svg class="product-icon" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <line
+                          x1="7"
+                          y1="7"
+                          x2="11.29"
+                          y2="11.29"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="14.62"
+                          y1="14.62"
+                          x2="18.91"
+                          y2="18.91"
+                          class="path"
+                        ></line>
+                        <polyline
+                          points="7 15.57 7 19 10.43 19"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="15.57 19 19 19 19 15.57"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="10.43 7 7 7 7 10.43"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="19 10.43 19 7 15.57 7"
+                          class="path"
+                        ></polyline>
+                        <line
+                          x1="14.71"
+                          y1="11.29"
+                          x2="19"
+                          y2="7"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="7"
+                          y1="19"
+                          x2="11.29"
+                          y2="14.71"
+                          class="path"
+                        ></line></svg
+                    ></a>
+                  </div>
+                </li>
+
+                <li class="products-box__item">
+                  <a class="products-box__link" href="#"
+                    ><h4 class="products-box__title">BeTV3</h4></a
+                  >
+                  <div class="rated">
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-empty"></i>
+                    <i class="icon-star-empty"></i>
+                  </div>
+                  <span class="price-box">
+                    <i class="icon-dollar"></i>
+                    <span class="price-box__price">5300.00-6300.00</span>
+                  </span>
+                  <div class="cart-box">
+                    <span class="cart-box__add">Add to cart</span>
+                    <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="i/sprite.svg#cart" />
+                    </svg>
+                  </div>
+                  <div class="products-box-img">
+                    <img
+                      src="bethemestore2-products-betv.webp"
+                      class="products-box-img__img"
+                      srcset="
+                        img/bethemestore2-products-betv-800x800.webp    800w,
+                        img/bethemestore2-products-betv-500x500.webp    500w,
+                        img/bethemestore2-products-betv-350x350.webp    350w,
+                        img/bethemestore2-products-betv-768x768.webp    768w,
+                        img/bethemestore2-products-betv-300x300.webp    300w,
+                        img/bethemestore2-products-betv-1200x1200.webp 1200w
+                      "
+                      sizes="(max-width:767px) 480px, (max-width:800px) 100vw, 800px"
+                    />
+                  </div>
+                  <span class="label on-sale-label">On sale</span>
+                  <div class="product-box-icon">
+                    <a
+                      class="product-box-icon__link product-box-icon__link_link"
+                      href="#"
+                    >
+                      <svg
+                        class="product-icon product-icon_link"
+                        viewBox="0 0 26 26"
+                      >
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <g>
+                          <path
+                            d="M10.17,8.76l2.12-2.12a5,5,0,0,1,7.07,0h0a5,5,0,0,1,0,7.07l-2.12,2.12"
+                            class="path"
+                          ></path>
+                          <path
+                            d="M15.83,17.24l-2.12,2.12a5,5,0,0,1-7.07,0h0a5,5,0,0,1,0-7.07l2.12-2.12"
+                            class="path"
+                          ></path>
+                          <line
+                            x1="10.17"
+                            y1="15.83"
+                            x2="15.83"
+                            y2="10.17"
+                            class="path"
+                          ></line>
+                        </g></svg
+                    ></a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_wishlist"
+                    >
+                      <svg class="product-icon" width="26" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <path
+                          class="path"
+                          d="M16.7,6a3.78,3.78,0,0,0-2.3.8A5.26,5.26,0,0,0,13,8.5a5,5,0,0,0-1.4-1.6A3.52,3.52,0,0,0,9.3,6a4.33,4.33,0,0,0-4.2,4.6c0,2.8,2.3,4.7,5.7,7.7.6.5,1.2,1.1,1.9,1.7H13a.37.37,0,0,0,.3-.1c.7-.6,1.3-1.2,1.9-1.7,3.4-2.9,5.7-4.8,5.7-7.7A4.3,4.3,0,0,0,16.7,6Z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_preview"
+                      ><svg class="product-icon" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <line
+                          x1="7"
+                          y1="7"
+                          x2="11.29"
+                          y2="11.29"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="14.62"
+                          y1="14.62"
+                          x2="18.91"
+                          y2="18.91"
+                          class="path"
+                        ></line>
+                        <polyline
+                          points="7 15.57 7 19 10.43 19"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="15.57 19 19 19 19 15.57"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="10.43 7 7 7 7 10.43"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="19 10.43 19 7 15.57 7"
+                          class="path"
+                        ></polyline>
+                        <line
+                          x1="14.71"
+                          y1="11.29"
+                          x2="19"
+                          y2="7"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="7"
+                          y1="19"
+                          x2="11.29"
+                          y2="14.71"
+                          class="path"
+                        ></line></svg
+                    ></a>
+                  </div>
+                </li>
+
+                <li class="products-box__item">
+                  <a class="products-box__link" href="#"
+                    ><h4 class="products-box__title">BePC1</h4></a
+                  >
+                  <div class="rated">
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                    <i class="icon-star-full"></i>
+                  </div>
+                  <span class="price-box">
+                    <i class="icon-dollar"></i>
+                    <span class="price-box__price">2250.00-2550.00</span>
+                  </span>
+                  <div class="cart-box">
+                    <span class="cart-box__add">Add to cart</span>
+                    <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="i/sprite.svg#cart" />
+                    </svg>
+                  </div>
+                  <div class="products-box-img">
+                    <img
+                      src="bethemestore2-products-pc.webp"
+                      class="products-box-img__img"
+                      srcset="
+                        img/bethemestore2-products-pc-800x800.webp    800w,
+                        img/bethemestore2-products-pc-500x500.webp    500w,
+                        img/bethemestore2-products-pc-350x350.webp    350w,
+                        img/bethemestore2-products-pc-768x768.webp    768w,
+                        img/bethemestore2-products-pc-300x300.webp    300w,
+                        img/bethemestore2-products-pc-1200x1200.webp 1200w
+                      "
+                      sizes="(max-width:767px) 480px, (max-width:800px) 100vw, 800px"
+                    />
+                  </div>
+                  <span class="label on-sale-label">On sale</span>
+                  <div class="product-box-icon">
+                    <a
+                      class="product-box-icon__link product-box-icon__link_link"
+                      href="#"
+                    >
+                      <svg
+                        class="product-icon product-icon_link"
+                        viewBox="0 0 26 26"
+                      >
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <g>
+                          <path
+                            d="M10.17,8.76l2.12-2.12a5,5,0,0,1,7.07,0h0a5,5,0,0,1,0,7.07l-2.12,2.12"
+                            class="path"
+                          ></path>
+                          <path
+                            d="M15.83,17.24l-2.12,2.12a5,5,0,0,1-7.07,0h0a5,5,0,0,1,0-7.07l2.12-2.12"
+                            class="path"
+                          ></path>
+                          <line
+                            x1="10.17"
+                            y1="15.83"
+                            x2="15.83"
+                            y2="10.17"
+                            class="path"
+                          ></line>
+                        </g></svg
+                    ></a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_wishlist"
+                    >
+                      <svg class="product-icon" width="26" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <path
+                          class="path"
+                          d="M16.7,6a3.78,3.78,0,0,0-2.3.8A5.26,5.26,0,0,0,13,8.5a5,5,0,0,0-1.4-1.6A3.52,3.52,0,0,0,9.3,6a4.33,4.33,0,0,0-4.2,4.6c0,2.8,2.3,4.7,5.7,7.7.6.5,1.2,1.1,1.9,1.7H13a.37.37,0,0,0,.3-.1c.7-.6,1.3-1.2,1.9-1.7,3.4-2.9,5.7-4.8,5.7-7.7A4.3,4.3,0,0,0,16.7,6Z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      class="product-box-icon__link product-box-icon__link_preview"
+                      ><svg class="product-icon" viewBox="0 0 26 26">
+                        <defs>
+                          <style>
+                            .path {
+                              fill: none;
+                              stroke: #333;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <line
+                          x1="7"
+                          y1="7"
+                          x2="11.29"
+                          y2="11.29"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="14.62"
+                          y1="14.62"
+                          x2="18.91"
+                          y2="18.91"
+                          class="path"
+                        ></line>
+                        <polyline
+                          points="7 15.57 7 19 10.43 19"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="15.57 19 19 19 19 15.57"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="10.43 7 7 7 7 10.43"
+                          class="path"
+                        ></polyline>
+                        <polyline
+                          points="19 10.43 19 7 15.57 7"
+                          class="path"
+                        ></polyline>
+                        <line
+                          x1="14.71"
+                          y1="11.29"
+                          x2="19"
+                          y2="7"
+                          class="path"
+                        ></line>
+                        <line
+                          x1="7"
+                          y1="19"
+                          x2="11.29"
+                          y2="14.71"
+                          class="path"
+                        ></line></svg
+                    ></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+      <aside class="feel-the-sound">
+        <div class="wrapper-box">
+          <div class="container">
+            <div class="wrapper">
+              <div class="wrapper-main">
+                <h2 class="wrapper-main__title">Feel the Sound</h2>
+                <span class="wrapper-main__text">Category products</span>
+              </div>
+              <div class="products-box products-box_feel-the-sound">
+                <ul
+                  class="products-box__list products-box__list_feel-the-sound"
+                >
+                  <li
+                    class="products-box__item products-box__item_feel-the-sound"
+                  >
+                    <a class="products-box__link" href="#"
+                      ><h4 class="products-box__title">BeHeadphones1</h4></a
+                    >
+                    <div class="rated">
+                      <i class="icon-star-full"></i>
+                      <i class="icon-star-full"></i>
+                      <i class="icon-star-full"></i>
+                      <i class="icon-star-full"></i>
+                      <i class="icon-star-full"></i>
+                    </div>
+                    <span class="price-box">
+                      <i class="icon-dollar"></i>
+                      <span class="price-box__price">430.00</span>
+                    </span>
+                    <div class="cart-box">
+                      <span class="cart-box__add">Add to cart</span>
+                      <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="i/sprite.svg#cart" />
+                      </svg>
+                    </div>
+                    <div class="products-box-img">
+                      <img
+                        src="img/bethemestore2-products-headphones.webp"
+                        class="products-box-img__img"
+                        srcset="
+                          img/bethemestore2-products-headphones-800x800.webp    800w,
+                          img/bethemestore2-products-headphones-500x500.webp    500w,
+                          img/bethemestore2-products-headphones-350x350.webp    350w,
+                          img/bethemestore2-products-headphones-768x768.webp    768w,
+                          img/bethemestore2-products-headphones-300x300.webp    300w,
+                          img/bethemestore2-products-headphones-1200x1200.webp 1200w
+                        "
+                        sizes="(max-width:767px) 480px, (max-width:800px) 100vw, 800px"
+                      />
+                    </div>
+                    <span class="label hot-label">Hot</span>
+                    <div class="product-box-icon">
+                      <a
+                        class="product-box-icon__link product-box-icon__link_link"
+                        href="#"
+                      >
+                        <svg
+                          class="product-icon product-icon_link"
+                          viewBox="0 0 26 26"
+                        >
+                          <defs>
+                            <style>
+                              .path {
+                                fill: none;
+                                stroke: #333;
+                                stroke-miterlimit: 10;
+                                stroke-width: 1.5px;
+                              }
+                            </style>
+                          </defs>
+                          <g>
+                            <path
+                              d="M10.17,8.76l2.12-2.12a5,5,0,0,1,7.07,0h0a5,5,0,0,1,0,7.07l-2.12,2.12"
+                              class="path"
+                            ></path>
+                            <path
+                              d="M15.83,17.24l-2.12,2.12a5,5,0,0,1-7.07,0h0a5,5,0,0,1,0-7.07l2.12-2.12"
+                              class="path"
+                            ></path>
+                            <line
+                              x1="10.17"
+                              y1="15.83"
+                              x2="15.83"
+                              y2="10.17"
+                              class="path"
+                            ></line>
+                          </g></svg
+                      ></a>
+                      <a
+                        href="#"
+                        class="product-box-icon__link product-box-icon__link_wishlist"
+                      >
+                        <svg
+                          class="product-icon"
+                          width="26"
+                          viewBox="0 0 26 26"
+                        >
+                          <defs>
+                            <style>
+                              .path {
+                                fill: none;
+                                stroke: #333;
+                                stroke-width: 1.5px;
+                              }
+                            </style>
+                          </defs>
+                          <path
+                            class="path"
+                            d="M16.7,6a3.78,3.78,0,0,0-2.3.8A5.26,5.26,0,0,0,13,8.5a5,5,0,0,0-1.4-1.6A3.52,3.52,0,0,0,9.3,6a4.33,4.33,0,0,0-4.2,4.6c0,2.8,2.3,4.7,5.7,7.7.6.5,1.2,1.1,1.9,1.7H13a.37.37,0,0,0,.3-.1c.7-.6,1.3-1.2,1.9-1.7,3.4-2.9,5.7-4.8,5.7-7.7A4.3,4.3,0,0,0,16.7,6Z"
+                          ></path>
+                        </svg>
+                      </a>
+                      <a
+                        href="#"
+                        class="product-box-icon__link product-box-icon__link_preview"
+                        ><svg class="product-icon" viewBox="0 0 26 26">
+                          <defs>
+                            <style>
+                              .path {
+                                fill: none;
+                                stroke: #333;
+                                stroke-miterlimit: 10;
+                                stroke-width: 1.5px;
+                              }
+                            </style>
+                          </defs>
+                          <line
+                            x1="7"
+                            y1="7"
+                            x2="11.29"
+                            y2="11.29"
+                            class="path"
+                          ></line>
+                          <line
+                            x1="14.62"
+                            y1="14.62"
+                            x2="18.91"
+                            y2="18.91"
+                            class="path"
+                          ></line>
+                          <polyline
+                            points="7 15.57 7 19 10.43 19"
+                            class="path"
+                          ></polyline>
+                          <polyline
+                            points="15.57 19 19 19 19 15.57"
+                            class="path"
+                          ></polyline>
+                          <polyline
+                            points="10.43 7 7 7 7 10.43"
+                            class="path"
+                          ></polyline>
+                          <polyline
+                            points="19 10.43 19 7 15.57 7"
+                            class="path"
+                          ></polyline>
+                          <line
+                            x1="14.71"
+                            y1="11.29"
+                            x2="19"
+                            y2="7"
+                            class="path"
+                          ></line>
+                          <line
+                            x1="7"
+                            y1="19"
+                            x2="11.29"
+                            y2="14.71"
+                            class="path"
+                          ></line></svg
+                      ></a>
+                    </div>
+                  </li>
+
+                  <li class="products-box__item">
+                    <a class="products-box__link" href="#"
+                      ><h4 class="products-box__title">BeMouse1</h4></a
+                    >
+                    <div class="rated">
+                      <i class="icon-star-full"></i>
+                      <i class="icon-star-full"></i>
+                      <i class="icon-star-full"></i>
+                      <i class="icon-star-full"></i>
+                      <i class="icon-star-full"></i>
+                    </div>
+                    <span class="price-box">
+                      <i class="icon-dollar"></i>
+                      <span class="price-box__price">68.99</span>
+                    </span>
+                    <div class="cart-box">
+                      <span class="cart-box__add">Add to cart</span>
+                      <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="i/sprite.svg#cart" />
+                      </svg>
+                    </div>
+                    <div class="products-box-img">
+                      <img
+                        src="img/bethemestore2-feel-the-sound-pr2.webp"
+                        alt=""
+                        class="products-box-img__img"
+                      />
+                    </div>
+                    <span class="label hot-label">Hot</span>
+                    <div class="product-box-icon">
+                      <a
+                        class="product-box-icon__link product-box-icon__link_link"
+                        href="#"
+                      >
+                        <svg
+                          class="product-icon product-icon_link"
+                          viewBox="0 0 26 26"
+                        >
+                          <defs>
+                            <style>
+                              .path {
+                                fill: none;
+                                stroke: #333;
+                                stroke-miterlimit: 10;
+                                stroke-width: 1.5px;
+                              }
+                            </style>
+                          </defs>
+                          <g>
+                            <path
+                              d="M10.17,8.76l2.12-2.12a5,5,0,0,1,7.07,0h0a5,5,0,0,1,0,7.07l-2.12,2.12"
+                              class="path"
+                            ></path>
+                            <path
+                              d="M15.83,17.24l-2.12,2.12a5,5,0,0,1-7.07,0h0a5,5,0,0,1,0-7.07l2.12-2.12"
+                              class="path"
+                            ></path>
+                            <line
+                              x1="10.17"
+                              y1="15.83"
+                              x2="15.83"
+                              y2="10.17"
+                              class="path"
+                            ></line>
+                          </g></svg
+                      ></a>
+                      <a
+                        href="#"
+                        class="product-box-icon__link product-box-icon__link_wishlist"
+                      >
+                        <svg
+                          class="product-icon"
+                          width="26"
+                          viewBox="0 0 26 26"
+                        >
+                          <defs>
+                            <style>
+                              .path {
+                                fill: none;
+                                stroke: #333;
+                                stroke-width: 1.5px;
+                              }
+                            </style>
+                          </defs>
+                          <path
+                            class="path"
+                            d="M16.7,6a3.78,3.78,0,0,0-2.3.8A5.26,5.26,0,0,0,13,8.5a5,5,0,0,0-1.4-1.6A3.52,3.52,0,0,0,9.3,6a4.33,4.33,0,0,0-4.2,4.6c0,2.8,2.3,4.7,5.7,7.7.6.5,1.2,1.1,1.9,1.7H13a.37.37,0,0,0,.3-.1c.7-.6,1.3-1.2,1.9-1.7,3.4-2.9,5.7-4.8,5.7-7.7A4.3,4.3,0,0,0,16.7,6Z"
+                          ></path>
+                        </svg>
+                      </a>
+                      <a
+                        href="#"
+                        class="product-box-icon__link product-box-icon__link_preview"
+                        ><svg class="product-icon" viewBox="0 0 26 26">
+                          <defs>
+                            <style>
+                              .path {
+                                fill: none;
+                                stroke: #333;
+                                stroke-miterlimit: 10;
+                                stroke-width: 1.5px;
+                              }
+                            </style>
+                          </defs>
+                          <line
+                            x1="7"
+                            y1="7"
+                            x2="11.29"
+                            y2="11.29"
+                            class="path"
+                          ></line>
+                          <line
+                            x1="14.62"
+                            y1="14.62"
+                            x2="18.91"
+                            y2="18.91"
+                            class="path"
+                          ></line>
+                          <polyline
+                            points="7 15.57 7 19 10.43 19"
+                            class="path"
+                          ></polyline>
+                          <polyline
+                            points="15.57 19 19 19 19 15.57"
+                            class="path"
+                          ></polyline>
+                          <polyline
+                            points="10.43 7 7 7 7 10.43"
+                            class="path"
+                          ></polyline>
+                          <polyline
+                            points="19 10.43 19 7 15.57 7"
+                            class="path"
+                          ></polyline>
+                          <line
+                            x1="14.71"
+                            y1="11.29"
+                            x2="19"
+                            y2="7"
+                            class="path"
+                          ></line>
+                          <line
+                            x1="7"
+                            y1="19"
+                            x2="11.29"
+                            y2="14.71"
+                            class="path"
+                          ></line></svg
+                      ></a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <section class="bephone-pro">
+        <div class="container">
+          <div class="wrapper-be-phone">
+            <div class="be-phone-text-box">
+              <h2 class="be-phone-text-box__title">
+                New <span class="be-phone-text-box__span">BePhone Pro</span>
+              </h2>
+              <p class="be-phone-text-box__text">Why BeShop?</p>
+            </div>
+            <article class="be-phone-box be-phone-box_guarantee">
+              <div class="be-phone-content-box">
+                <h4 class="be-phone-content-box__title">
+                  Guarantee of originality
+                </h4>
+                <p class="be-phone-content-box__text">
+                  Sapien fermentum diam egestas tellus commodo. Scelerisque.
+                </p>
+                <p class="be-phone-content-box__text">
+                  <a class="be-phone-content-box__link" href="#"
+                    >Show me products</a
+                  >
+                </p>
+              </div>
+              <div class="be-phone-img-box">
+                <img
+                  class="be-phone-img-box__img"
+                  src="img/bethemestore2-home-piс.webp"
+                />
+              </div>
+            </article>
+            <article class="be-phone-box be-phone-box_safe-payments">
+              <div class="be-phone-content-box">
+                <h4 class="be-phone-content-box__title">Safe payments</h4>
+                <p class="be-phone-content-box__text">
+                  Sapien fermentum diam egestas tellus commodo. Scelerisque.
+                </p>
+                <p class="be-phone-content-box__text">
+                  <a class="be-phone-content-box__link" href="#"
+                    >Show me products</a
+                  >
+                </p>
+              </div>
+              <div class="be-phone-img-box">
+                <img
+                  class="be-phone-img-box__img"
+                  src="img/bethemestore2-home-pic2.webp"
+                />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- ./bephone-pro--->
+      <div class="container-grey">
+        <div class="container">
+          <div class="offer-box">
+            <section class="offer-box-wrap">
+              <h3 class="offer-box-wrap__heading">
+                Betheme offers you convenient shopping experience at any scale
+              </h3>
+              <article class="offer-box-wrap__article">
+                <h4 class="offer-box-wrap__title">Mobile shopping</h4>
+                <p class="offer-box-wrap__text">
+                  Vitae adipiscing tu enean ligula nibhmolestie id viverra
+                  dapilo eleifend Aliquam sem conubia
+                </p>
+                <img
+                  class="offer-box-wrap__img"
+                  src="img/bethemestore2-offer-svg.svg"
+                />
+              </article>
+              <article class="offer-box-wrap__article">
+                <h4 class="offer-box-wrap__title">Secure payments</h4>
+                <p class="offer-box-wrap__text">
+                  Mauris fringilla sem laoreet urna. Nunc elementum. Phasellus
+                  ultrices, dui tellus, elementum vel
+                </p>
+                <img
+                  class="offer-box-wrap__img"
+                  src="img/bethemestore2-offer-svg1.svg"
+                />
+              </article>
+              <article class="offer-box-wrap__article">
+                <h4 class="offer-box-wrap__title">Present packaging</h4>
+                <p class="offer-box-wrap__text">
+                  Proin ultricies lobortis, varius eu, purus. Phasellus laoreet
+                  ligula at, consequat diam silacis
+                </p>
+                <img
+                  class="offer-box-wrap__img"
+                  src="img/bethemestore2-offer-svg2.svg"
+                />
+              </article>
+            </section>
+            <section class="brands">
+              <article>
+                <h4 class="brands__title">Exclusive brands in our store</h4>
+                <div class="brands-box">
+                  <div class="brands-box__item">
+                    <img class="brands-box__img" src="img/brand-phonee.svg" />
+                  </div>
+                  <div class="brands-box__item">
+                    <img class="brands-box__img" src="img/brand-jbe.svg" />
+                  </div>
+                  <div class="brands-box__item">
+                    <img class="brands-box__img" src="img/brand-digimate.svg" />
+                  </div>
+                  <div class="brands-box__item">
+                    <img class="brands-box__img" src="img/brand-futech.svg" />
+                  </div>
+                  <div class="brands-box__item">
+                    <img class="brands-box__img" src="img/brand-senco.svg" />
+                  </div>
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="container container_about-us">
+        <section class="about-us">
+          <article class="about-us-article">
+            <h3 class="about-us-article__title about-us-article__title_main">
+              Pellentesque imperdiet enim eget velit justo, dictum, habitant.
+            </h3>
+            <p class="about-us-article__text">
+              Gravida id in cras in faucibus. Quis rhoncus dignissim leo, velit,
+              pharetra duis lacus fames morbi. Odio potenti congue commodo,
+              feugiat ultrices. Vitae duis massa nisl pellentesque vitae et,
+              nisi amet, lectus. Massa aliquet felis non nisl.
+            </p>
+          </article>
+          <article class="about-us-article">
+            <h4
+              class="about-us-article__title about-us-article__title_about-beshop"
+            >
+              About the Beshop
+            </h4>
+            <p class="about-us-article__text">
+              Gravida id in cras in faucibus. Quis rhoncus dignissim leo, velit,
+              pharetra duis lacus fames morbi. Odio potenti congue commodo,
+              feugiat ultrices. Vitae duis massa nisl pellentesque vitae et,
+              nisi amet, lectus. Massa aliquet felis non nisl.
+            </p>
+          </article>
+          <article class="about-us-article">
+            <h4
+              class="about-us-article__title about-us-article__title_our-journey"
+            >
+              Our Journey
+            </h4>
+            <p class="about-us-article__text">
+              Pretium est donec quis at feugiat semper euismod dignissim aliquam
+              vestibulum. Commodo consectetur leo senectus mollis praesent. Mus
+              interdum dolor imperdiet dis malesuada. Facilisi senectus lobortis
+              congue neque egestas.
+            </p>
+            <p></p>
+          </article>
+        </section>
+      </div>
+      <!-- ./about-us-->
+      <section class="section-form-box">
+        <div class="section-wrap">
+          <div class="container">
+            <div class="form-container">
+              <div class="section-wrap-content">
+                <h2 class="section-wrap-content__title">
+                  Receive a
+                  <span class="section-wrap-content__label">10%</span> discount
+                  on your purchases
+                </h2>
+                <span class="section-wrap-content__span"
+                  >Sign up for the newsletter</span
+                >
+                <ul class="section-wrap-content__list">
+                  <li class="section-wrap-content__item">
+                    <i class="icon-checkmark"></i> Varius eget ultricies
+                  </li>
+                  <li class="section-wrap-content__item">
+                    <i class="icon-checkmark"></i>Suspendisse nunc
+                  </li>
+                </ul>
+              </div>
+              <div class="section-form">
+                <div class="section-wrap-form" id="formContainer">
+                  <h3 class="section-form__title">Join our newsletter</h3>
+                  <form id="myForm">
+                    <label for="name"></label>
+                    <input
+                      class="section-wrap-form__input"
+                      id="name"
+                      placeholder="*Name"
+                    />
+                    <div id="nameError" class="error"></div>
+
+                    <label for="email"></label>
+                    <input
+                      class="section-wrap-form__input"
+                      id="email"
+                      placeholder="*Your e-mail"
+                    />
+                    <div id="emailError" class="error"></div>
+
+                    <div class="subscribe">
+                      <p>
+                        <input
+                          class="subscribe__input"
+                          type="button"
+                          value="Subscribe"
+                          onclick="validateForm()"
+                          id="submitButton"
+                        />
+                      </p>
+                    </div>
+                  </form>
+                </div>
+                <div class="success-message" id="successMessage">
+                  <p>Thank you for subscribing!</p>
+                  <p>You're almost done. Please confirm your email</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--section-form-->
+    </main>
+
+    <section class="articles">
+      <h2 class="articles__title">Our articles</h2>
+      <div class="article-slider">
+        <article class="content">
+          <div class="article-post-box">
+            <div class="meta">
+              <a href="#" class="meta__tag">Desktop</a>
+              <span class="meta__date">/ 14 Nov 2022</span>
+            </div>
+            <h3 class="article-post-box__title">
+              <a class="article-post-box__title-link" href="#"
+                >3 Minimalist Desk Setups
+              </a>
+            </h3>
+            <p class="article-post-box__text">
+              Websites in professional use templating systems. Commercial
+              publishing platforms and content management systems ensure that…
+            </p>
+            <a class="article-post-box__read-more" href="#">Continue reading</a>
+          </div>
+          <div class="article-post-img">
+            <a href="#">
+              <img
+                class="article-post-img__img"
+                src="img/3-minimalist-desk-setups-entry-header.jpg"
+              />
+              <div class="meta-img">
+                <img class="meta-img__icon" src="img/elon-musk-icon.png" />
+                <a class="meta-img__author" href="#">Elon Musk</a>
+              </div>
+            </a>
+          </div>
+        </article>
+        <article class="content">
+          <div class="article-post-box">
+            <div class="meta">
+              <a href="#" class="meta__tag">Gaming, Laptops</a>
+              <span class="meta__date"> / 14 Nov 2022</span>
+            </div>
+            <h3 class="article-post-box__title">
+              <a class="article-post-box__title-link" href="#"
+                >Best Gaming Laptop Models</a
+              >
+            </h3>
+            <p class="article-post-box__text">
+              At solmen va esser necessi far uniform grammatica, pronunciation e
+              plu sommun paroles. Ma quande lingues coalesce, li gram…
+            </p>
+            <a class="article-post-box__read-more" href="#">Continue reading</a>
+          </div>
+          <div class="article-post-img">
+            <a href="#">
+              <img
+                class="article-post-img__img"
+                src="img/bestore-article-1.jpg"
+              />
+              <div class="meta-img">
+                <img class="meta-img__icon" src="img/elon-musk-icon.png" />
+                <a class="meta-img__author" href="#">Elon Musk</a>
+              </div>
+            </a>
+          </div>
+        </article>
+        <article class="content">
+          <div class="article-post-box">
+            <div class="meta">
+              <a href="#" class="meta__tag">Keyboards</a>
+              <span class="meta__date"> / 14 Nov 2022</span>
+            </div>
+            <h3 class="article-post-box__title">
+              <a class="article-post-box__title-link" href="#">
+                Logitech POP Keys
+              </a>
+            </h3>
+            <p class="article-post-box__text">
+              Websites in professional use templating systems. Commercial
+              publishing platforms and content management systems ensure that…
+            </p>
+            <a class="article-post-box__read-more" href="#">Continue reading</a>
+          </div>
+          <div class="article-post-img">
+            <a href="#">
+              <img
+                class="article-post-img__img"
+                src="img/logitech-pop-keys-entry-header.jpg"
+              />
+              <div class="meta-img">
+                <img class="meta-img__icon" src="img/elon-musk-icon.png" />
+                <a class="meta-img__author" href="#">Elon Musk</a>
+              </div>
+            </a>
+          </div>
+        </article>
+        <article class="content">
+          <div class="article-post-box">
+            <div class="meta">
+              <a href="#" class="meta__tag">Cameras</a>
+              <span class="meta__date">/ 14 Nov 2022</span>
+            </div>
+            <h3 class="article-post-box__title">
+              <a class="article-post-box__title-link" href="#"
+                >Cameras for Street Photography
+              </a>
+            </h3>
+            <p class="article-post-box__text">
+              Websites in professional use templating systems. Commercial
+              publishing platforms and content management systems ensure that…
+            </p>
+            <a class="article-post-box__read-more" href="#">Continue reading</a>
+          </div>
+          <div class="article-post-img">
+            <a href="#">
+              <img class="article-post-img__img" src="img/article-camera.jpg" />
+              <div class="meta-img">
+                <img class="meta-img__icon" src="img/elon-musk-icon.png" />
+                <a class="meta-img__author" href="#">Elon Musk</a>
+              </div>
+            </a>
+          </div>
+        </article>
+        <article class="content">
+          <div class="article-post-box">
+            <div class="meta">
+              <a href="#" class="meta__tag">Hi-Fi, Stereo</a>
+              <span class="meta__date">/ 14 Nov 2022</span>
+            </div>
+            <h3 class="article-post-box__title">
+              <a class="article-post-box__title-link" href="#">
+                How to choose a HI-FI stereo system
+              </a>
+            </h3>
+            <p class="article-post-box__text">
+              Websites in professional use templating systems. Commercial
+              publishing platforms and content management systems ensure that…
+            </p>
+            <a class="article-post-box__read-more" href="#">Continue reading</a>
+          </div>
+          <div class="article-post-img">
+            <a href="#">
+              <img class="article-post-img__img" src="img/article-stereo.jpg" />
+              <div class="meta-img">
+                <img class="meta-img__icon" src="img/elon-musk-icon.png" />
+                <a class="meta-img__author" href="#">Elon Musk</a>
+              </div>
+            </a>
+          </div>
+        </article>
+      </div>
+      <i class="icon-arrow-left"></i>
+      <i class="icon-arrow-right"></i>
+    </section>
+
+    <div class="container container_footer">
+      <footer class="footer">
+        <div class="footer-col footer-col_one">
+          <div class="customer-info">
+            <div class="icon-wrap">
+              <i class="icon-support icon-support_footer"></i>
+            </div>
+            <div class="customer-info__block">
+              <h5 class="customer-info__title">Got questions? Call us 24/7!</h5>
+              <p class="customer-info__phone">+61 (0) 383 766 284</p>
+            </div>
+          </div>
+          <h6 class="customer-info__address">
+            Level 13, 2 Elizabeth St, Melbourne, Victoria 3000, Australia
+          </h6>
+          <div class="footer-social-link-box">
+            <a
+              class="footer-icon-link footer-icon-link_fb"
+              href="https://uk-ua.facebook.com/"
+              target="_blank"
+              ><i class="footer-icon icon-fb"></i
+            ></a>
+            <a
+              class="footer-icon-link footer-icon-link_inst"
+              href="https://www.instagram.com/"
+              target="_blank"
+              ><i class="footer-icon icon-inst"></i
+            ></a>
+            <a
+              class="footer-icon-link footer-icon-link_pinterest"
+              href="https://www.pinterest.com/"
+              target="_blank"
+              ><i class="footer-icon icon-pintrs"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-col footer-col_two">
+          <div class="customer-service">
+            <h6 class="customer-service__title">
+              <a class="footer-link customer-service__link" href="#"
+                >Customer-service</a
+              >
+            </h6>
+            <a href="" class="footer-link customer-service__link">Orders</a>
+            <a href="" class="footer-link customer-service__link">Downloads</a>
+            <a href="" class="footer-link customer-service__link">Addresses</a>
+            <a href="" class="footer-link customer-service__link"
+              >Account details</a
+            >
+            <a href="" class="footer-link customer-service__link"
+              >Lost password</a
+            >
+          </div>
+          <div class="useful-links">
+            <h6 class="footer-link useful-links__title">
+              <a class="footer-link useful-links__link" href="#"
+                >Useful links</a
+              >
+            </h6>
+            <a href="" class="footer-link useful-links__link">Features</a>
+            <a href="" class="footer-link useful-links__link">About</a>
+            <a href="" class="footer-link useful-links__link">Contact</a>
+            <a href="" class="footer-link useful-links__link">Terms of use</a>
+            <a href="" class="footer-link useful-links__link">Wishlist</a>
+          </div>
+          <div class="delivery">
+            <h6 class="footer-link delivery__title">
+              <a class="footer-link delivery__link" href="#">Delivery</a>
+            </h6>
+            <a href="" class="footer-link delivery__link">How it Works</a>
+            <a href="" class="footer-link delivery__link">Free Delivery</a>
+            <a href="" class="footer-link delivery__link">FAQ</a>
+          </div>
+        </div>
+
+        <div class="footer-payment-box">
+          <ul class="payment-box-list">
+            <li class="payment-box-list__item">
+              <img
+                class="payment-box-list__img"
+                src="img/payment-method-visa.svg"
+              />
+            </li>
+            <li class="payment-box-list__item">
+              <img
+                class="payment-box-list__img"
+                src="img/payment-method-diners-club.svg"
+              />
+            </li>
+            <li class="payment-box-list__item">
+              <img
+                class="payment-box-list__img"
+                src="img/payment-method-amex.svg"
+              />
+            </li>
+            <li class="payment-box-list__item">
+              <img
+                class="payment-box-list__img"
+                src="img/payment-method-discover.svg"
+              />
+            </li>
+            <li class="payment-box-list__item">
+              <img
+                class="payment-box-list__img"
+                src="img/payment-method-mastercard.svg"
+              />
+            </li>
+            <li class="payment-box-list__item">
+              <img
+                class="payment-box-list__img"
+                src="img/payment-method-maestro.svg"
+              />
+            </li>
+            <li class="payment-box-list__item">
+              <img
+                class="payment-box-list__img"
+                src="img/payment-method-stripe.svg"
+              />
+            </li>
+            <li class="payment-box-list__item">
+              <img
+                class="payment-box-list__img"
+                src="img/payment-method-pay-pal.svg"
+              />
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <!--./footer-->
+    <div id="map"></div>
+    <div class="mobile-nav">
+      <div class="container">
+        <ul class="mobile-nav__list">
+          <li class="mobile-nav__item">
+            <a href="#" class="mbl nav__link">
+              <svg
+                class="mobile-nav__svg"
+                width="26"
+                viewBox="0 0 26 26"
+                aria-hidden="true"
+              >
+                <defs>
+                  <style>
+                    .path {
+                      fill: none;
+                      stroke: #000;
+                      stroke-miterlimit: 10;
+                      stroke-width: 1.5px;
+                    }
+                  </style>
+                </defs>
+                <g id="Layer_4" data-name="Layer 4">
+                  <rect x="15" y="5" width="6" height="6" class="path"></rect>
+                  <rect x="5" y="5" width="6" height="6" class="path"></rect>
+                  <rect x="5" y="15" width="6" height="6" class="path"></rect>
+                  <rect x="15" y="15" width="6" height="6" class="path"></rect>
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-nav__item login-button">
+            <a href="#" class="mbl nav__link">
+              <svg
+                class="mobile-nav__svg"
+                width="26"
+                viewBox="0 0 26 26"
+                aria-label="user icon"
+              >
+                <defs>
+                  <style>
+                    .path {
+                      fill: none;
+                      stroke: #333333;
+                      stroke-width: 1.5px;
+                    }
+                  </style>
+                </defs>
+                <circle class="path" cx="13" cy="9.7" r="4.1"></circle>
+                <path
+                  class="path"
+                  d="M19.51,18.1v2.31h-13V18.1c0-2.37,2.92-4.3,6.51-4.3S19.51,15.73,19.51,18.1Z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-nav__item store-btn">
+            <a href="#" class="mbl nav__link">
+              <svg
+                class="mobile-nav__svg"
+                width="26"
+                viewBox="0 0 26 26"
+                aria-hidden="true"
+              >
+                <defs>
+                  <style>
+                    .path {
+                      fill: none;
+                      stroke: #333;
+                      stroke-miterlimit: 10;
+                      stroke-width: 1.5px;
+                    }
+                  </style>
+                </defs>
+                <polygon
+                  class="path"
+                  points="20.4 20.4 5.6 20.4 6.83 10.53 19.17 10.53 20.4 20.4"
+                ></polygon>
+                <path
+                  class="path"
+                  d="M9.3,10.53V9.3a3.7,3.7,0,1,1,7.4,0v1.23"
+                ></path>
+              </svg>
+              <span class="mobile-nav__count_cart">0</span>
+            </a>
+          </li>
+          <li class="mobile-nav__item">
+            <a href="#" class="mbl nav__link">
+              <svg
+                class="mobile-nav__svg"
+                width="26"
+                viewBox="0 0 26 26"
+                aria-hidden="true"
+              >
+                <defs>
+                  <style>
+                    .path {
+                      fill: none;
+                      stroke: #333;
+                      stroke-width: 1.5px;
+                    }
+                  </style>
+                </defs>
+                <path
+                  class="path"
+                  d="M16.7,6a3.78,3.78,0,0,0-2.3.8A5.26,5.26,0,0,0,13,8.5a5,5,0,0,0-1.4-1.6A3.52,3.52,0,0,0,9.3,6a4.33,4.33,0,0,0-4.2,4.6c0,2.8,2.3,4.7,5.7,7.7.6.5,1.2,1.1,1.9,1.7H13a.37.37,0,0,0,.3-.1c.7-.6,1.3-1.2,1.9-1.7,3.4-2.9,5.7-4.8,5.7-7.7A4.3,4.3,0,0,0,16.7,6Z"
+                ></path>
+              </svg>
+              <span class="mobile-nav__count_wishlist">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--  JavaScript here -->
+    <!-- <script src="js/app.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <script src="js/myslick.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

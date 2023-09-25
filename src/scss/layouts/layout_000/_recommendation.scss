@@ -1,0 +1,99 @@
+.recommendation {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2%;
+  margin-bottom: 40px;
+}
+
+.recommendation-block-box {
+  @include e(one) {
+    background-color: $bgColorBlack;
+  }
+
+  @include e(img) {
+    @include m(one) {
+      background-color: $bgColorBlack;
+      border-radius: $borderRadius;
+      background-image: url(#{$img}bethemestore2-wrap-bg1.png);
+      background-position: bottom right;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 350px;
+      align-content: center;
+    }
+  }
+  @include e(img) {
+    @include m(two) {
+      background-color: $bgColor3;
+      border-radius: $borderRadius;
+      background-image: url(#{$img}bethemestore2-wrap-bg2.webp);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: bottom right;
+      height: 350px;
+    }
+  }
+}
+
+.recommendation-desc {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+  padding-top: 25px;
+
+  @include e(title) {
+    margin: 0;
+    color: $white;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 15px;
+
+    @include m(two) {
+      color: $mainColor;
+    }
+  }
+  @include e(desc) {
+    order: -1;
+    margin: 0;
+    color: $white;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 20px;
+
+    @include m(two) {
+      color: $mainColor;
+    }
+  }
+  @include e(text) {
+    margin: 0;
+    color: $white;
+    font-size: 13px;
+    font-weight: 500;
+
+    @include m(two) {
+      color: $mainColor;
+    }
+  }
+
+  @include e(btn) {
+    margin-top: 40px;
+    text-decoration: none;
+  }
+}
+
+.btn-label {
+  color: #ffffff;
+  background-color: #2a27e9;
+  font-family: Plus Jakarta Sans;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  padding: 16px 40px 16px 40px;
+  border-width: 0px;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: $darkBlue;
+  }
+}

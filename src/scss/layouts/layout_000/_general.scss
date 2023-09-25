@@ -1,0 +1,37 @@
+html {
+  @include getCssVar(font-size);
+}
+
+body {
+  @include getCssVar(font-family);
+  font-size: 1rem;
+  position: relative;
+  color: $mainColor;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  position: relative;
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+.main {
+  margin-top: 120px;
+  flex: 1;
+}
+
+.container-grey {
+  background-color: #f8f8f8;
+}
+
+.container-fixed {
+  position: fixed;
+  z-index: 1;
+  background-color: #ffff;
+  width: 100%;
+}

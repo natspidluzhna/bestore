@@ -1,0 +1,19 @@
+.page-title {
+  @include e(heading) {
+    font-size: 44px;
+  }
+}
+
+.description {
+  text-align: center;
+
+  @include e(title) {
+    display: inline-block;
+    font-size: 32px;
+  }
+  @include e(product-name) {
+    display: inline-block;
+    font-size: 32px;
+    margin-bottom: 60px;
+  }
+}

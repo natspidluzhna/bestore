@@ -1,0 +1,138 @@
+.slider-box {
+  margin-top: 20px;
+}
+
+.slider-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  min-height: 420px;
+}
+
+.main-slider {
+  grid-column: 1/2 span;
+  grid-row: 1/2 span;
+  position: relative;
+  background-image: url(#{$img}black-banner-img1.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.main-slider-content {
+  text-align: center;
+  color: $white;
+
+  @include e(title) {
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    font-size: 36px;
+  }
+
+  @include e(text) {
+    margin-bottom: 20px;
+  }
+
+  @include e(btn) {
+    display: inline-block;
+    text-decoration: none;
+    color: $white;
+    padding: 13px 30px;
+    border-radius: 5px;
+    background-color: rgb(28, 97, 231);
+    box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: rgb(42, 39, 233);
+    }
+  }
+}
+
+.block_two {
+  position: relative;
+  border-radius: 10px;
+  grid-column: 3 / span 2;
+  background-image: url(#{$img}pink-banner-img.jpg);
+  background-size: cover;
+  background-position: top;
+}
+
+.block_two-content {
+  position: absolute;
+  color: $white;
+  top: 25%;
+  left: 5%;
+
+  @include e(title) {
+    margin: 0;
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+}
+
+.block_three {
+  position: relative;
+  border-radius: 10px;
+  background-image: url(#{$img}blue-banner-img.jpg);
+  background-size: cover;
+  background-position: 85%;
+}
+
+.block_three-content {
+  position: absolute;
+  color: $white;
+  top: 10%;
+  left: 7%;
+
+  @include e(title) {
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 13px;
+  }
+
+  @include e(text) {
+    margin: 0;
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.block_four {
+  position: relative;
+  border-radius: 10px;
+  background-image: url(#{$img}yellow-banner-img.jpg);
+  background-size: cover;
+  background-position: 85%;
+}
+
+.dots-list {
+  position: absolute;
+  bottom: 0;
+  padding: 4px 8px;
+  border-radius: 15px;
+  background-color: $white;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  display: flex;
+}
+
+.dot {
+  margin: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: grey;
+  transition: all 0.25s ease;
+}
+
+.content-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: $mainColor;
+  padding: 10px 25px;
+  border-radius: 5px;
+  background-color: $white;
+}

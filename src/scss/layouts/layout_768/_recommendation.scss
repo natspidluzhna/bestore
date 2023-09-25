@@ -1,0 +1,9 @@
+.recommendation {
+  grid-template-columns: 1fr 1fr;
+}
+
+.recommendation-desc {
+  @include e(title) {
+    font-size: 36px;
+  }
+}

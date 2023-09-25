@@ -1,0 +1,9 @@
+.menu-box{
+    display: none;
+}
+
+.user-box{
+    @include m (wishlist){
+        display: flex;
+    }
+}

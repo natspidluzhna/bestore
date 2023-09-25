@@ -1,0 +1,39 @@
+.offer-box-wrap {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2%;
+
+  @include e(heading) {
+    flex-basis: 100%;
+    padding: 0 60px;
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  @include e(article) {
+    flex-basis: 30%;
+  }
+
+  @include e(title) {
+    font-size: 18px;
+  }
+  @include e(text) {
+    font-size: 14px;
+  }
+}
+
+.brands {
+  @include e(title) {
+    font-size: 18px;
+  }
+}
+
+.brands-box {
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+
+  @include e(img) {
+    width: 50%;
+    margin: 0 auto;
+  }
+}

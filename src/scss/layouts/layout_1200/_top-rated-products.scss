@@ -1,0 +1,12 @@
+.products-box {
+  @include e(list) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+.products-box__list {
+  @include m(top-rated-products) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    justify-content: center;
+  }
+}

@@ -1,0 +1,33 @@
+.section-wrap-content {
+  flex: 0 0 calc((100% - 3%) / 2);
+  @include e(title) {
+    font-size: 42px;
+  }
+  @include e(list) {
+    display: flex;
+    gap: 5%;
+  }
+
+  @include e(item) {
+    font-size: 15px;
+  }
+}
+
+.section-form {
+  padding: 40px 40px 40px;
+  flex: 0 0 calc((100% - 3%) / 2);
+}
+
+.success-message {
+  display: none;
+  padding: 20px;
+}
+.success-message > p:first-child {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: $lightBlue;
+}
+.success-message > p:nth-child(2) {
+  font-size: 1rem;
+}

@@ -1,0 +1,22 @@
+.be-phone-box {
+  align-items: flex-start;
+}
+
+.be-phone-content-box {
+  align-items: flex-start;
+  @include e(title) {
+    margin-top: 25px;
+    font-size: 24px;
+  }
+  @include e(text) {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  @include e(link) {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+}
+.be-phone-img-box {
+  flex: 0 0 50%;
+}

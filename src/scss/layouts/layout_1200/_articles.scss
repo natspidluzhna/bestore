@@ -1,0 +1,6 @@
+.articles {
+  @include e(title) {
+    font-size: 35px;
+    text-align: center;
+  }
+}

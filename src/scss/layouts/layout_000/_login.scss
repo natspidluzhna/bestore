@@ -1,0 +1,150 @@
+.login {
+  background-color: #f7f7f7;
+  position: fixed;
+  width: 20rem;
+  top: 0;
+  right: -100%;
+  transition: right 0.3s;
+  z-index: 99999;
+  height: 100%;
+  overflow: hidden;
+}
+
+.login.visible {
+  right: 0;
+}
+
+.login-heading {
+  position: relative;
+  text-align: center;
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.105);
+
+  @include e(title) {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 600;
+  }
+}
+
+.icon-close {
+  @include m(login) {
+    font-size: 25px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.login-form {
+  padding: 20px 15px 15px 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.105);
+}
+
+.login-username {
+  margin: 0 0 20px;
+}
+.login-username > label {
+  display: block;
+  margin-bottom: 5px;
+  color: rgba(16, 16, 16, 0.9);
+  font-size: 15px;
+}
+.login-username > label > span {
+  color: #e01020;
+  font-size: 20px;
+}
+
+.input-username {
+  padding: 10px 15px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  font-size: 16px;
+  transition: border-color 0.5s ease;
+}
+
+.login-password {
+  margin: 0 0 20px;
+}
+.login-password > label {
+  display: block;
+  margin-bottom: 5px;
+  color: rgba(16, 16, 16, 0.9);
+  font-size: 15px;
+}
+.login-password > label > span {
+  color: #e01020;
+  font-size: 20px;
+}
+
+.login-password-input {
+  padding: 10px 15px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  font-size: 16px;
+  transition: border-color 0.5s ease;
+}
+
+.login-btn {
+  color: $white;
+  background-color: $lightBlue;
+  padding: 16px 40px 16px 40px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+
+  &:hover {
+    background-color: $darkBlue;
+    cursor: pointer;
+  }
+}
+
+.login-form-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+.login-form-footer > a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 13px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.label-for-checkbox {
+  order: -1;
+  display: flex;
+  align-items: center;
+}
+.label-for-checkbox > span {
+  margin-left: 5px;
+  font-family: $baseFontFamily;
+}
+
+.create-account-question {
+  text-align: center;
+}
+.create-account-question > p {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.create-account-question > a {
+  color: $lightBlue;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

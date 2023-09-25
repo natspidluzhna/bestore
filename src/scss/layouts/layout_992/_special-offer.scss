@@ -1,0 +1,40 @@
+.special-offer {
+  padding: 40px 40px 0;
+}
+
+.img-wrapper {
+  background-position: bottom;
+}
+
+.special-offer-box {
+  flex-direction: row;
+  @include e(title) {
+    font-size: 42px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  @include e(span) {
+    margin-bottom: 40px;
+  }
+
+  @include e(price) {
+    margin-bottom: 40px;
+  }
+}
+
+.col {
+  flex-basis: 50%;
+}
+
+.col_two {
+  order: initial;
+  padding-bottom: 40px;
+}
+
+.counter {
+  margin-bottom: 20px;
+}
+
+.special-offer-box__btn-wrapper:hover {
+  background-color: #28c3d9;
+}

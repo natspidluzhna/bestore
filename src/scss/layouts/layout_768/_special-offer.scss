@@ -1,0 +1,13 @@
+.counter {
+  display: flex;
+  justify-content: center;
+  gap: 1%;
+
+  @include e(item) {
+    flex-basis: 100px;
+  }
+}
+
+.img-wrapper {
+  min-height: 420px;
+}

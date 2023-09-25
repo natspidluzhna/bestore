@@ -1,0 +1,14 @@
+.container-fluid {
+  background-color: $orange;
+  padding: 10px;
+}
+
+.promo-bar-box {
+  display: flex;
+  justify-content: center;
+}
+
+.promo-bar-box__text {
+  font-size: 13px;
+  white-space: nowrap;
+}

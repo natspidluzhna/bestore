@@ -1,0 +1,27 @@
+.newest-products {
+  padding: 40px 0;
+  padding-bottom: 30px;
+
+  @include e(title) {
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: $mainColor;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+
+  @include e(desc) {
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: $addColor;
+  }
+}
+
+.products-box__list {
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+}

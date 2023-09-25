@@ -1,0 +1,26 @@
+.recommendation {
+  grid-template-columns: 1fr 1fr;
+}
+
+.recommendation-block-box {
+  @include e(one) {
+    background-color: $bgColorBlack;
+  }
+
+  @include e(img) {
+    @include m(one) {
+      height: 450px;
+    }
+  }
+  @include e(img) {
+    @include m(two) {
+      height: 450px;
+    }
+  }
+}
+
+.recommendation-desc {
+  @include e(title) {
+    font-size: 36px;
+  }
+}

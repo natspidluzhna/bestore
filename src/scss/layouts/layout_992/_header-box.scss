@@ -1,0 +1,13 @@
+header {
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
+}
+
+.user-box {
+  @include m(wishlist) {
+    display: flex;
+  }
+}
+
+.user-box:hover > div > span:first-child {
+  color: $lightBlue;
+}

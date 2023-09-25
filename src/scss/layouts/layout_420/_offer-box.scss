@@ -1,0 +1,23 @@
+.offer-box-wrap {
+  @include e(heading) {
+    font-size: 21px;
+  }
+  @include e(title) {
+    font-size: 18px;
+  }
+}
+
+.brands {
+  @include e(title) {
+    font-size: 18px;
+  }
+}
+
+.brands-box {
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+
+  @include e(img) {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
