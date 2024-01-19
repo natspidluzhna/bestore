@@ -201,82 +201,40 @@ cartBoxes.forEach((cartBox) => {
   });
 });
 
-/* ============ navigation ================ */
-const computerNavItem = document.querySelector(".nav-desktop__item_computer");
-const smartphoneNavItem = document.querySelector(
-  ".nav-desktop__item_smartphone"
-);
-const watchNavItem = document.querySelector(".nav-desktop__item_watch");
-const tvNavItem = document.querySelector(".nav-desktop__item_tv");
-const tabletsNavItem = document.querySelector(".nav-desktop__item_tablets");
-const gamingNavItem = document.querySelector(".nav-desktop__item_gaming");
-/* ====== containers ======*/
-const computerContainer = document.querySelector(".container_computer");
-const smartphoneContainer = document.querySelector(".container_smartphone");
-const watchContainer = document.querySelector(".container_watch");
-const tvContainer = document.querySelector(".container_tv");
-const tabletsContainer = document.querySelector(".container_tablets");
-const gamingContainer = document.querySelector(".container_gaming");
+/* =========== navigation =========== */ 
 
-computerNavItem.addEventListener("mouseover", () => {
-  computerContainer.style.display = "block";
-  smartphoneContainer.style.display = "none";
-  watchContainer.style.display = "none";
-  tvContainer.style.display = "none";
-  tabletsContainer.style.display = "none";
-  gamingContainer.style.display = "none";
-});
+const navItems = [
+  "computer",
+  "smartphone",
+  "watch",
+  "tv",
+  "tablets",
+  "gaming"
+];
 
-smartphoneNavItem.addEventListener("mouseover", () => {
-  computerContainer.style.display = "none";
-  smartphoneContainer.style.display = "block";
-  watchContainer.style.display = "none";
-  tvContainer.style.display = "none";
-  tabletsContainer.style.display = "none";
-  gamingContainer.style.display = "none";
-});
+const containers = [
+  "container_computer",
+  "container_smartphone",
+  "container_watch",
+  "container_tv",
+  "container_tablets",
+  "container_gaming"
+];
 
-watchNavItem.addEventListener("mouseover", () => {
-  computerContainer.style.display = "none";
-  smartphoneContainer.style.display = "none";
-  watchContainer.style.display = "block";
-  tvContainer.style.display = "none";
-  tabletsContainer.style.display = "none";
-  gamingContainer.style.display = "none";
-});
+const navEventListeners = navItems.map((item, index) => {
+  const navItem = document.querySelector(`.nav-desktop__item_${item}`);
+  const container = document.querySelector(`.${containers[index]}`);
 
-tvNavItem.addEventListener("mouseover", () => {
-  computerContainer.style.display = "none";
-  smartphoneContainer.style.display = "none";
-  watchContainer.style.display = "none";
-  tvContainer.style.display = "block";
-  tabletsContainer.style.display = "none";
-  gamingContainer.style.display = "none";
-});
-
-tabletsNavItem.addEventListener("mouseover", () => {
-  computerContainer.style.display = "none";
-  smartphoneContainer.style.display = "none";
-  watchContainer.style.display = "none";
-  tvContainer.style.display = "none";
-  tabletsContainer.style.display = "block";
-  gamingContainer.style.display = "none";
-});
-
-gamingNavItem.addEventListener("mouseover", () => {
-  computerContainer.style.display = "none";
-  smartphoneContainer.style.display = "none";
-  watchContainer.style.display = "none";
-  tvContainer.style.display = "none";
-  tabletsContainer.style.display = "none";
-  gamingContainer.style.display = "block";
+  navItem.addEventListener("mouseover", () => {
+    containers.forEach((otherContainer) => {
+      document.querySelector(`.${otherContainer}`).style.display = "none";
+    });
+    container.style.display = "block";
+  });
 });
 
 document.querySelector(".main-nav").addEventListener("mouseleave", () => {
-  computerContainer.style.display = "none";
-  smartphoneContainer.style.display = "none";
-  watchContainer.style.display = "none";
-  tvContainer.style.display = "none";
-  tabletsContainer.style.display = "none";
-  gamingContainer.style.display = "none";
+  containers.forEach((container) => {
+    document.querySelector(`.${container}`).style.display = "none";
+  });
 });
